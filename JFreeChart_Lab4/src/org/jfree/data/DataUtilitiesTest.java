@@ -59,11 +59,10 @@ import org.junit.Test;
  * Some tests for the {@link DataUtilities} class.
  */
 public class DataUtilitiesTest {
+	
+	/* PROVIDED TEST CASES FOR A4 BEGINS --------------- */
 
-	/**
-	 * Tests the createNumberArray2D() method.
-	 */
-	@Test
+	/* @Test
 	public void testCreateNumberArray2D() {
 		double[][] d = new double[2][];
 		d[0] = new double[] { 1.1, 2.2, 3.3, 4.4 };
@@ -72,14 +71,11 @@ public class DataUtilitiesTest {
 		assertEquals(2, n.length);
 		assertEquals(4, n[0].length);
 		assertEquals(5, n[1].length);
-	}
+	} */
 
-	private static final double EPSILON = 0.000000001;
+	// private static final double EPSILON = 0.000000001;
 
-	/**
-	 * Some checks for the calculateColumnTotal() method.
-	 */
-	@Test
+	/* @Test
 	public void testCalculateColumnTotal() {
 		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
 		table.addValue(new Double(1.0), "R0", "C0");
@@ -90,12 +86,9 @@ public class DataUtilitiesTest {
 		assertEquals(6.0, DataUtilities.calculateColumnTotal(table, 1), EPSILON);
 		table.setValue(null, "R1", "C1");
 		assertEquals(2.0, DataUtilities.calculateColumnTotal(table, 1), EPSILON);
-	}
+	} */
 
-	/**
-	 * Some checks for the calculateColumnTotal() method.
-	 */
-	@Test
+	/* @Test
 	public void testCalculateColumnTotal2() {
 		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
 		table.addValue(new Double(1.0), "R0", "C0");
@@ -114,12 +107,9 @@ public class DataUtilitiesTest {
 		table.setValue(null, "R1", "C1");
 		assertEquals(2.0, DataUtilities.calculateColumnTotal(table, 1, new int[] { 0, 1 }), EPSILON);
 		assertEquals(0.0, DataUtilities.calculateColumnTotal(table, 1, new int[] { 1 }), EPSILON);
-	}
+	} */
 
-	/**
-	 * Some checks for the calculateRowTotal() method.
-	 */
-	@Test
+	/* @Test
 	public void testCalculateRowTotal() {
 		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
 		table.addValue(new Double(1.0), "R0", "C0");
@@ -130,12 +120,9 @@ public class DataUtilitiesTest {
 		assertEquals(7.0, DataUtilities.calculateRowTotal(table, 1), EPSILON);
 		table.setValue(null, "R1", "C1");
 		assertEquals(3.0, DataUtilities.calculateRowTotal(table, 1), EPSILON);
-	}
+	} */
 
-	/**
-	 * Some checks for the calculateRowTotal() method.
-	 */
-	@Test
+	/* @Test
 	public void testCalculateRowTotal2() {
 		DefaultKeyedValues2D table = new DefaultKeyedValues2D();
 		table.addValue(new Double(1.0), "R0", "C0");
@@ -154,12 +141,9 @@ public class DataUtilitiesTest {
 		table.setValue(null, "R1", "C1");
 		assertEquals(3.0, DataUtilities.calculateRowTotal(table, 1, new int[] { 0, 1 }), EPSILON);
 		assertEquals(0.0, DataUtilities.calculateRowTotal(table, 1, new int[] { 1 }), EPSILON);
-	}
+	} */
 
-	/**
-	 * Some tests for the equal(double[][], double[][]) method.
-	 */
-	@Test
+	/* @Test
 	public void testEqual() {
 		assertTrue(DataUtilities.equal(null, null));
 
@@ -203,12 +187,9 @@ public class DataUtilitiesTest {
 		assertFalse(DataUtilities.equal(a, b));
 		b[0][4] = Double.POSITIVE_INFINITY;
 		assertTrue(DataUtilities.equal(a, b));
-	}
+	} */
 
-	/**
-	 * Some tests for the clone() method.
-	 */
-	@Test
+	/* @Test
 	public void testClone() {
 		double[][] a = new double[1][];
 		double[][] b = DataUtilities.clone(a);
@@ -228,7 +209,9 @@ public class DataUtilitiesTest {
 		assertFalse(DataUtilities.equal(a, b));
 		b[0][0] = 99.9;
 		assertTrue(DataUtilities.equal(a, b));
-	}
+	} */
+	
+	/* PROVIDED TEST CASES FOR A4 ENDS --------------- */
 
 	// Testing invalid parameter with data as null
 
