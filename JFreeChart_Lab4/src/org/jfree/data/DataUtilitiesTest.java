@@ -512,54 +512,6 @@ public class DataUtilitiesTest {
 	}
 	
 
-    /**
-     * Some tests for the equal(double[][], double[][]) method.
-     */
-//    @Test
-//    public void testEqual() {
-//        assertTrue(DataUtilities.equal(null, null));
-//        
-//        double[][] a = new double[5][];
-//        double[][] b = new double[5][];
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a = new double[4][];
-//        assertFalse(DataUtilities.equal(a, b));
-//        b = new double[4][];
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a[0] = new double[6];
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0] = new double[6];
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a[0][0] = 1.0;
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0][0] = 1.0;
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a[0][1] = Double.NaN;
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0][1] = Double.NaN;
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a[0][2] = Double.NEGATIVE_INFINITY;
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0][2] = Double.NEGATIVE_INFINITY;
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a[0][3] = Double.POSITIVE_INFINITY;
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0][3] = Double.POSITIVE_INFINITY;
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a[0][4] = Double.POSITIVE_INFINITY;
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0][4] = Double.NEGATIVE_INFINITY;
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0][4] = Double.POSITIVE_INFINITY;
-//        assertTrue(DataUtilities.equal(a, b));
-//    }
 
     /**
      * Some tests for the clone() method.
@@ -586,19 +538,6 @@ public class DataUtilitiesTest {
 //        assertTrue(DataUtilities.equal(a, b));
 //    }
 	
-	   /**
-     * Tests the createNumberArray2D() method.
-     */
-    @Test
-    public void testCreateNumberArray2D() {
-        double[][] d = new double[2][];
-        d[0] = new double[] {1.1, 2.2, 3.3, 4.4};
-        d[1] = new double[] {1.1, 2.2, 3.3, 4.4, 5.5};
-        Number[][] n = DataUtilities.createNumberArray2D(d);
-        assertEquals(2, n.length);
-        assertEquals(4, n[0].length);
-        assertEquals(5, n[1].length);
-    }
 
 	// Test a valid data parameter with positive values and negative index
 	/*
