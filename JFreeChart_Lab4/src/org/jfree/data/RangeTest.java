@@ -277,6 +277,35 @@ public class RangeTest {
 //	    }
 
 	// -------------getUpperBound() Test End------------------
+	
+	@Test
+	public void doubleNaNRangeTrue() {
+		assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
+	}
+	
+	@Test
+	public void doubleNaNRangeFalse() {
+		assertFalse(new Range(1.0, 5.0).isNaNRange());
+	}
+	
+	@Test
+	public void doubleUpperBoundAndNaNLowerBoundFalse() {
+		assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
+	}
+	
+	@Test
+	public void doubleLowerBoundAndNaNUpperBoundFalse() {
+		assertFalse(new Range(2.0, Double.NaN).isNaNRange());
+	}
+	
+	
+//    @Test
+//    public void testIsNaNRange() {
+//        assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
+//        assertFalse(new Range(1.0, 2.0).isNaNRange());
+//        assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
+//        assertFalse(new Range(1.0, Double.NaN).isNaNRange());
+//    }
 
 	// -------------constrain() Test Start------------------
 
@@ -339,6 +368,71 @@ public class RangeTest {
 		assertEquals("The constrain of 5 in range 1 and 1 should result in an OutOfBounds Error", 1, input,
 				.000000001d);
 	}
+	
+    //testing a decimal range
+    @Test
+    public void decimalConstrain() {
+    	Range data = new Range (0.0, 1.0);
+    	double actual = data.constrain(0.5);
+    	assertEquals(0.5, actual, 0.0000001);
+    }
+    
+    //testing the lowerbound of constrain
+    @Test
+    public void lowerBoundConstrain() {
+    	Range data = new Range (0.0, 5.0);
+    	double actual = data.constrain(0.0);
+    	assertEquals(0.0, actual, 0.0000001);
+    }
+    
+    
+    //testing the upper bound range constrain
+    @Test
+    public void upperBoundConstrain() {
+    	Range data = new Range (0.0, 5.0);
+    	double actual = data.constrain(5.0);
+    	assertEquals(5.0, actual, 0.0000001);
+    }
+    
+    //testing negative out of bounds range
+    @Test
+    public void negativeLowerOutOfBoundsConstrain() {
+    	Range data = new Range (0.0, 5.0);
+    	double actual = data.constrain(-2.0);
+    	assertEquals(0.0, actual, 0.0000001);
+    }
+    
+    //testing positive upper out of bounds range
+    @Test
+    public void positiveUpperOutOfBoundsConstrain() {
+    	Range data = new Range (0.0, 5.0);
+    	double actual = data.constrain(6.0);
+    	assertEquals(5.0, actual, 0.0000001);
+    }
+    
+    //testing infinite out of bounds range
+    @Test
+    public void infiniteUpperBoundsRangeConstrain() {
+    	Range data = new Range (0.0, 5.0);
+    	double actual = data.constrain(Double.POSITIVE_INFINITY);
+    	assertEquals(5.0, actual, 0.0000001);
+    }
+    
+    //testing negative infinite out of bounds range
+    @Test
+    public void negativeInfiniteUpperBoundsRangeConstrain() {
+    	Range data = new Range (0.0, 5.0);
+    	double actual = data.constrain(Double.NEGATIVE_INFINITY);
+    	assertEquals(0.0, actual, 0.0000001);
+    }
+    
+    //testing not a number constrain
+    @Test
+    public void NaNConstrain() {
+    	Range data = new Range (0.0, 5.0);
+    	double actual = data.constrain(Double.NaN);
+    	assertTrue(Double.isNaN(actual));
+    }
 
 	// -------------constrain() Test End------------------
 
@@ -836,11 +930,5 @@ public class RangeTest {
 //        assertEquals(2.0, rr.getUpperBound(), EPSILON);
 //    }
 //    
-//    @Test
-//    public void testIsNaNRange() {
-//        assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
-//        assertFalse(new Range(1.0, 2.0).isNaNRange());
-//        assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
-//        assertFalse(new Range(1.0, Double.NaN).isNaNRange());
-//    }
+
 }
