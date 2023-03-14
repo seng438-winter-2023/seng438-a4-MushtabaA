@@ -150,70 +150,85 @@ public class RangeTest {
 		double actualLength = sampleRange.getLength();
 		assertEquals("Length should be 273.24", expectedLength, actualLength, .000000001d);
 	}
-	
+
 	// Testing contains()
 
-		// Test if a valid integer exists in range
-		@Test
-		public void testGetContainsNumberExists() {
-			Range sampleRange = new Range(20, 24);
+	// Test if a valid integer exists in range
+	@Test
+	public void testGetContainsNumberExists() {
+		Range sampleRange = new Range(20, 24);
 
-			boolean expectedContains = true;
-			boolean actualContains = sampleRange.contains(23);
-			assertEquals("22 should exist in range of 20 to 24", expectedContains, actualContains);
-		}
+		boolean expectedContains = true;
+		boolean actualContains = sampleRange.contains(23);
+		assertEquals("22 should exist in range of 20 to 24", expectedContains, actualContains);
+	}
 
-		// Test if a valid integer does not exist in range
-		@Test
-		public void testGetContainsNumberNotExists() {
-			Range sampleRange = new Range(20, 24);
+	// Test if a valid integer does not exist in range
+	@Test
+	public void testGetContainsNumberNotExists() {
+		Range sampleRange = new Range(20, 24);
 
-			boolean expectedContains = false;
-			boolean actualContains = sampleRange.contains(25);
-			assertEquals("25 should not exist in range of 20 to 24", expectedContains, actualContains);
-		}
-		
-		// Test if a valid integer does exist in range and is lower bound
-		@Test
-		public void testGetContainsPositiveNumberExistsLowerBound() {
-			Range sampleRange = new Range(20, 24);
+		boolean expectedContains = false;
+		boolean actualContains = sampleRange.contains(25);
+		assertEquals("25 should not exist in range of 20 to 24", expectedContains, actualContains);
+	}
 
-			boolean expectedContains = true;
-			boolean actualContains = sampleRange.contains(20);
-			assertEquals("20 should exist in range of -20 to 24", expectedContains, actualContains);
-		}
-		
-		// Test if a valid integer does exist in range and is upper bound
-		@Test
-		public void testGetContainsPositiveNumberExistsUpperBound() {
-			Range sampleRange = new Range(42, 224);
+	// Test if a valid integer does exist in range and is lower bound
+	@Test
+	public void testGetContainsPositiveNumberExistsLowerBound() {
+		Range sampleRange = new Range(20, 24);
 
-			boolean expectedContains = true;
-			boolean actualContains = sampleRange.contains(224);
-			assertEquals("224 should exist in range of 42 to 224", expectedContains, actualContains);
-		}
-		// Test if a valid integer does exist in range and is lower bound and is negative
-		@Test
-		public void testGetContainsNegativeNumberExistsLowerBound() {
-			Range sampleRange = new Range(-20, 24);
+		boolean expectedContains = true;
+		boolean actualContains = sampleRange.contains(20);
+		assertEquals("20 should exist in range of -20 to 24", expectedContains, actualContains);
+	}
 
-			boolean expectedContains = true;
-			boolean actualContains = sampleRange.contains(-20);
-			assertEquals("-20 should exist in range of -20 to 24", expectedContains, actualContains);
-		}
-		
-		// Test if a valid integer does exist in range and is upper bound and is negative
-		@Test
-		public void testGetContainsNegativeNumberExistsUpperBound() {
-			Range sampleRange = new Range(-42, -24);
+	// Test if a valid integer does exist in range and is upper bound
+	@Test
+	public void testGetContainsPositiveNumberExistsUpperBound() {
+		Range sampleRange = new Range(42, 224);
 
-			boolean expectedContains = true;
-			boolean actualContains = sampleRange.contains(-24);
-			assertEquals("-24 should exist in range of -42 to -24", expectedContains, actualContains);
-		}
-		
-	    //-------------getUpperBound() Test Start------------------
-	    
+		boolean expectedContains = true;
+		boolean actualContains = sampleRange.contains(224);
+		assertEquals("224 should exist in range of 42 to 224", expectedContains, actualContains);
+	}
+
+	// Test if a valid integer does exist in range and is lower bound and is
+	// negative
+	@Test
+	public void testGetContainsNegativeNumberExistsLowerBound() {
+		Range sampleRange = new Range(-20, 24);
+
+		boolean expectedContains = true;
+		boolean actualContains = sampleRange.contains(-20);
+		assertEquals("-20 should exist in range of -20 to 24", expectedContains, actualContains);
+	}
+
+	// Test if a valid integer does exist in range and is upper bound and is
+	// negative
+	@Test
+	public void testGetContainsNegativeNumberExistsUpperBound() {
+		Range sampleRange = new Range(-42, -24);
+
+		boolean expectedContains = true;
+		boolean actualContains = sampleRange.contains(-24);
+		assertEquals("-24 should exist in range of -42 to -24", expectedContains, actualContains);
+	}
+
+	// Increasing Mutation Coverage for contains
+
+	// Test if a valid integer does not exist in range
+	@Test
+	public void testGetContainsNumberNotExistsLower() {
+		Range sampleRange = new Range(20, 24);
+
+		boolean expectedContains = false;
+		boolean actualContains = sampleRange.contains(19);
+		assertEquals("19 should not exist in range of 20 to 24", expectedContains, actualContains);
+	}
+
+	// -------------getUpperBound() Test Start------------------
+
 //	    //testing method getUpperBound() for case where upper bound != lower bound
 //	    @Test
 //	    public void upperBoundRange() {
@@ -221,17 +236,16 @@ public class RangeTest {
 //	    	assertEquals("The upper bound of -1 and 1 should be 1",
 //	    	1, exampleRange.getUpperBound(), .000000001d);
 //	    }
-	    
-	    //testing same range (equal value range)
-	    @Test
-	    public void upperBoundEqualRange() {
-	    	Range data = new Range(1, 1);	//Set Range
-	    	double input = data.getUpperBound();	//push value through method
-	    	//assert value with input
-	    	assertEquals("The upper bound of 1 and 1 should be 1",
-	    	1, input, .000000001d);
-	    }
-	    
+
+	// testing same range (equal value range)
+	@Test
+	public void upperBoundEqualRange() {
+		Range data = new Range(1, 1); // Set Range
+		double input = data.getUpperBound(); // push value through method
+		// assert value with input
+		assertEquals("The upper bound of 1 and 1 should be 1", 1, input, .000000001d);
+	}
+
 //	    //testing only positive range
 //	    @Test
 //	    public void upperBoundPositiveRange() {
@@ -241,7 +255,7 @@ public class RangeTest {
 //	    	assertEquals("The upper bound of 1.0 and 2.0 should be 2.0",
 //	    	2.0, input, .000000001d);
 //	    }
-	    
+
 //	    //testing negative range
 //	    @Test
 //	    public void upperBoundNegativeRange() {
@@ -251,7 +265,7 @@ public class RangeTest {
 //	    	assertEquals("The upper bound of -1.0 and -0.5 should be -0.5",
 //	    	-0.5, input, .000000001d);
 //	    }
-	    
+
 //	    //testing max and minimum range
 //	    @Test
 //	    public void upperBoundMaxMinRange() {
@@ -261,11 +275,11 @@ public class RangeTest {
 //	    	assertEquals("The upper bound of Min and Max should be Max",
 //	    	Double.MAX_VALUE, input, .000000001d);
 //	    }
-	    
-	    //-------------getUpperBound() Test End------------------
-	    
-	    //-------------constrain() Test Start------------------
-	    
+
+	// -------------getUpperBound() Test End------------------
+
+	// -------------constrain() Test Start------------------
+
 //	    //positive range test
 //	    @Test
 //	    public void positiveConstrain() {
@@ -275,7 +289,7 @@ public class RangeTest {
 //	    	assertEquals("The constrain of 9 in range 1 and 10 should be 10"
 //	    			, 10, input, .000000001d);
 //	    }
-	    
+
 //	    //negative range test
 //	    @Test
 //	    public void negativeConstrain() {
@@ -285,17 +299,16 @@ public class RangeTest {
 //	    	assertEquals("The constrain of -9 in range -10 and -1 should be -10"
 //	    			, -10, input, .000000001d);
 //	    }
-	    
-	    //equal range test
-	    @Test
-	    public void equalConstrain() {
-	    	Range data = new Range(1, 1);	//Set Range
-	    	double input = data.constrain(1);	//push value through method
-	    	//assert value with input
-	    	assertEquals("The constrain of 1 in range 1 and 1 should be 1"
-	    			, 1, input, .000000001d);
-	    }
-	    
+
+	// equal range test
+	@Test
+	public void equalConstrain() {
+		Range data = new Range(1, 1); // Set Range
+		double input = data.constrain(1); // push value through method
+		// assert value with input
+		assertEquals("The constrain of 1 in range 1 and 1 should be 1", 1, input, .000000001d);
+	}
+
 //	    //decimal range test
 //	    @Test
 //	    public void decimalConstrain() {
@@ -305,8 +318,7 @@ public class RangeTest {
 //	    	assertEquals("The constrain of 0.5 in range -1.0 and 1.0 should be 1.0"
 //	    			, 1.0, input, .000000001d);
 //	    }
-	    
-	    
+
 //	    //max and min test
 //	    @Test
 //	    public void maxMinConstrain() {
@@ -316,33 +328,33 @@ public class RangeTest {
 //	    	assertEquals("The constrain of 10 in range Min and Max should be Max"
 //	    			, Double.MAX_VALUE, input, .000000001d);
 //	    }
-	    
-	    //Passing an out of range value in constrain method
-	    //Supposed to throw an out of bounds exception
-	    @Test
-	    public void outOfRangeConstrain() {
-	    	Range data = new Range(1, 1);	//Set Range
-	    	double input = data.constrain(5);	//push value through method
-	    	//assert value with input
-	    	assertEquals("The constrain of 5 in range 1 and 1 should result in an OutOfBounds Error"
-	    			, 1, input, .000000001d);
-	    }
-	    
-	    //-------------constrain() Test End------------------
 
-		// Testing intersect()
-		
-		// EQUIVALENCE CLASS TESTING
-		// Test if equal ranges intersect
-		@Test
-		public void testIntersectEqualRanges() {
-			Range sampleRange = new Range(0, 10);
-			
-			boolean expectedIntersect = true;
-			boolean actualIntersect = sampleRange.intersects(0, 10);
-			assertEquals("Equal ranges should intersect", expectedIntersect, actualIntersect);
-		}
-		
+	// Passing an out of range value in constrain method
+	// Supposed to throw an out of bounds exception
+	@Test
+	public void outOfRangeConstrain() {
+		Range data = new Range(1, 1); // Set Range
+		double input = data.constrain(5); // push value through method
+		// assert value with input
+		assertEquals("The constrain of 5 in range 1 and 1 should result in an OutOfBounds Error", 1, input,
+				.000000001d);
+	}
+
+	// -------------constrain() Test End------------------
+
+	// Testing intersect()
+
+	// EQUIVALENCE CLASS TESTING
+	// Test if equal ranges intersect
+	@Test
+	public void testIntersectEqualRanges() {
+		Range sampleRange = new Range(0, 10);
+
+		boolean expectedIntersect = true;
+		boolean actualIntersect = sampleRange.intersects(0, 10);
+		assertEquals("Equal ranges should intersect", expectedIntersect, actualIntersect);
+	}
+
 //		// Test if ranges intersect when one range's upper bound is greater than another's lower bound
 //		@Test
 //		public void testIntersectRangeOneUpperBoundGreaterThanRangeTwoLowerBound() {
@@ -352,27 +364,31 @@ public class RangeTest {
 //			boolean actualIntersect = sampleRange.intersects(5, 30);
 //			assertEquals("Ranges should intersect when one range's upper bound is greater than another's lower bound", expectedIntersect, actualIntersect);
 //		}
-		
-		// Test if ranges intersect when one range's lower bound is less than another's upper bound
-		@Test
-		public void testIntersectRangeOneLowerBoundLessThanRangeTwoUpperBound() {
-			Range sampleRange = new Range(0, 10);
-			
-			boolean expectedIntersect = true;
-			boolean actualIntersect = sampleRange.intersects(-10, 5);
-			assertEquals("Ranges should intersect when one range's lower bound is less than another's upper bound", expectedIntersect, actualIntersect);
-		}
-		
-		// Test if ranges do not intersect when one range's upper bound is less than another's upper bound
-		@Test
-		public void testIntersectRangeOneUpperBoundLessThanRangeTwoLowerBound() {
-			Range sampleRange = new Range(0, 10);
-			
-			boolean expectedIntersect = false;
-			boolean actualIntersect = sampleRange.intersects(15, 30);
-			assertEquals("Ranges should not intersect when one range's upper bound is less than another's lower bound", expectedIntersect, actualIntersect);
-		}
-		
+
+	// Test if ranges intersect when one range's lower bound is less than another's
+	// upper bound
+	@Test
+	public void testIntersectRangeOneLowerBoundLessThanRangeTwoUpperBound() {
+		Range sampleRange = new Range(0, 10);
+
+		boolean expectedIntersect = true;
+		boolean actualIntersect = sampleRange.intersects(-10, 5);
+		assertEquals("Ranges should intersect when one range's lower bound is less than another's upper bound",
+				expectedIntersect, actualIntersect);
+	}
+
+	// Test if ranges do not intersect when one range's upper bound is less than
+	// another's upper bound
+	@Test
+	public void testIntersectRangeOneUpperBoundLessThanRangeTwoLowerBound() {
+		Range sampleRange = new Range(0, 10);
+
+		boolean expectedIntersect = false;
+		boolean actualIntersect = sampleRange.intersects(15, 30);
+		assertEquals("Ranges should not intersect when one range's upper bound is less than another's lower bound",
+				expectedIntersect, actualIntersect);
+	}
+
 //		// Test if ranges do not intersect when one range's lower bound is greater than another's upper bound
 //		@Test
 //		public void testIntersectRangeOneLowerBoundGreaterThanRangeTwoUpperBound() {
@@ -382,8 +398,8 @@ public class RangeTest {
 //			boolean actualIntersect = sampleRange.intersects(-30, -15);
 //			assertEquals("Ranges should not intersect when one range's lower bound is greater than another's upper bound", expectedIntersect, actualIntersect);
 //		}
-		
-		// BOUNDARY VALUE TESTING
+
+	// BOUNDARY VALUE TESTING
 //		Note: Failed in v4
 //		// Test if ranges intersect when both ranges' bounds are equal (i.e. upper == lower)
 //		@Test
@@ -403,7 +419,7 @@ public class RangeTest {
 //			boolean actualIntersect = sampleRange.intersects(10, 30);
 //			assertEquals("Ranges should intersect when one range's upper bound is equal to another's lower bound", expectedIntersect, actualIntersect);
 //		}
-		
+
 //		Note: Failed in v4
 //		// Test if ranges intersect when one range's lower bound is equal to another's upper bound
 //		@Test
@@ -414,9 +430,110 @@ public class RangeTest {
 //			boolean actualIntersect = sampleRange.intersects(-10, 0);
 //			assertEquals("Ranges should intersect when one range's lower bound is equal to another's upper bound", expectedIntersect, actualIntersect);
 //		}
-		
-		
+
+	// Mutation Coverage for Combine
+
+	// Test combine for two null
+	@Test
+	public void testCombineRangeBothNull() {
+		assertNull(Range.combine(null, null));
+	}
+
+	// Test combine for upper bound null
+	@Test
+	public void testCombineRangeUpperBoundNull() {
+		Range r1 = new Range(1.0, 2.0);
+		Range r2 = new Range(1.5, 2.5);
+		assertEquals(r1, Range.combine(r1, null));
+	}
+
+	// Test combine for lower bound null
+	@Test
+	public void testCombineRangeLowerBoundNull() {
+		Range r1 = new Range(1.0, 2.0);
+		Range r2 = new Range(1.5, 2.5);
+
+		assertEquals(r2, Range.combine(null, r2));
+	}
+
+	// Test combine for valid input
+	@Test
+	public void testCombineRangeValid() {
+		Range r1 = new Range(1.0, 2.0);
+		Range r2 = new Range(1.5, 2.5);
+
+		assertEquals(new Range(1.0, 2.5), Range.combine(r1, r2));
+	}
+
+	// Test Lower bound NaN
+	private static final double EPSILON = 0.0000000001;
+	@Test
+	public void testGetLowerBoundNaN() {
+	     Range r1 = new Range(1.0, 2.0);
+	     Range r2 = new Range(1.5, 2.5);
+	     Range r3 = new Range(Double.NaN, 1.3);
+	     Range rr = Range.combine(r1, r3);
+	     assertTrue(Double.isNaN(rr.getLowerBound()));
+	}
 	
+	// Test Upper bound Epsilon
+	@Test
+	public void testGetUpperBoundEpsilon() {
+	     Range r1 = new Range(1.0, 2.0);
+	     Range r2 = new Range(1.5, 2.5);
+	     Range r3 = new Range(Double.NaN, 1.3);
+	     Range rr = Range.combine(r1, r3);
+	     assertEquals(2.0, rr.getUpperBound(), EPSILON);
+	}
+
+	// Test Lower bound Epsilon
+	@Test
+	public void testGetLowerBoundEpsilon() {
+	     Range r1 = new Range(1.0, 2.0);
+	     Range r2 = new Range(1.5, 2.5);
+	     Range r3 = new Range(Double.NaN, 1.3);
+	     Range rr = Range.combine(r1, r3);
+	     Range r4 = new Range(1.7, Double.NaN);
+	     rr = Range.combine(r4, r1);
+	     assertEquals(1.0, rr.getLowerBound(), EPSILON);
+	}
+	
+	// Test Upper bound NaN
+		@Test
+		public void testGetUpperBoundNaN() {
+		     Range r1 = new Range(1.0, 2.0);
+		     Range r2 = new Range(1.5, 2.5);
+		     Range r3 = new Range(Double.NaN, 1.3);
+		     Range rr = Range.combine(r1, r3);
+		     Range r4 = new Range(1.7, Double.NaN);
+		     rr = Range.combine(r4, r1);
+		     assertTrue(Double.isNaN(rr.getUpperBound()));
+		}
+	
+//  /**
+//  * Some checks for the combine method.
+//  */
+// @Test
+// public void testCombine() {
+//     Range r1 = new Range(1.0, 2.0);
+//     Range r2 = new Range(1.5, 2.5);
+//
+//     assertNull(Range.combine(null, null));
+//     assertEquals(r1, Range.combine(r1, null));
+//     assertEquals(r2, Range.combine(null, r2));
+//     assertEquals(new Range(1.0, 2.5), Range.combine(r1, r2));
+//
+//     Range r3 = new Range(Double.NaN, 1.3);
+//     Range rr = Range.combine(r1, r3);
+//     assertTrue(Double.isNaN(rr.getLowerBound()));
+//     assertEquals(2.0, rr.getUpperBound(), EPSILON);
+//
+//     Range r4 = new Range(1.7, Double.NaN);
+//     rr = Range.combine(r4, r1);
+//     assertEquals(1.0, rr.getLowerBound(), EPSILON);
+//     assertTrue(Double.isNaN(rr.getUpperBound()));
+// }
+
 	// ! Provided by SENG 438 Lab Document
 	@After
 	public void tearDown() throws Exception {
@@ -427,8 +544,6 @@ public class RangeTest {
 	}
 	// ! End of Code provided by Lab Doc.
 
-	
-	
 //	! Default Test Cases
 //    /**
 //     * Confirm that the constructor initializes all the required fields.
