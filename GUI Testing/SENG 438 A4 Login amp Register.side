@@ -1,0 +1,769 @@
+{
+  "id": "018899cd-dcc0-4eef-b395-9a36ee1e9a08",
+  "version": "2.0",
+  "name": "SENG 438 A4 Login &amp; Register",
+  "url": "https://www.costco.com",
+  "tests": [{
+    "id": "ddc4dfba-f94d-4fc4-9dab-dc6bce06c044",
+    "name": "Login Valid Email And Password",
+    "commands": [{
+      "id": "ecf0f13b-fb31-43bc-bd90-e2108b53dfd2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79335ed9-92bf-43a1-886b-72a0217c3d5f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1600x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "216ebc31-c3d4-43f7-86f8-f2a4e5e64502",
+      "comment": "",
+      "command": "click",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.com/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29c08668-66e4-4675-ba0e-f56cbc085b01",
+      "comment": "",
+      "command": "type",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "seng401g23@gmail.com"
+    }, {
+      "id": "f5dc33c7-5d73-46a8-8356-88501f074734",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "SENG401Group#23"
+    }, {
+      "id": "8625a710-d71a-4888-8460-a7675b3e0d5e",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f3dc352-4a74-46d7-bdfa-800dbc7d1c7a",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ab7b6fe-cc3d-4193-a92e-1b3198ba2e4c",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5b8619b-9a57-41d4-9421-233fb5defc1d",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4edd5f66-2982-44a3-af4c-9069849a95ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.material-icons",
+      "targets": [
+        ["css=.material-icons", "css:finder"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"],
+        ["xpath=//i[contains(.,'visibility')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c8cdbd7-6d7a-4f5a-b8dc-5fca19d4e81b",
+      "comment": "",
+      "command": "click",
+      "target": "id=next",
+      "targets": [
+        ["id=next", "id"],
+        ["css=#next", "css:finder"],
+        ["xpath=//button[@id='next']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78ab7f12-401e-4d5c-9e40-e190dc75d692",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,36)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dde6c101-8738-4c0b-952f-3d33d9a6a61e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,113)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "954af020-a64c-4d5d-b76b-c4d6e1052bfd",
+      "comment": "",
+      "command": "click",
+      "target": "id=shopAsNonMemberBtn",
+      "targets": [
+        ["id=shopAsNonMemberBtn", "id"],
+        ["css=#shopAsNonMemberBtn", "css:finder"],
+        ["xpath=//input[@id='shopAsNonMemberBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='link-membership-interrupt']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5f9d58d7-f3a2-418b-ad3c-5b891db53b72",
+    "name": "Login Invalid Email And Password",
+    "commands": [{
+      "id": "77e7b32f-aeb0-4b2b-a6cd-5984fad3ffce",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "deb31883-4896-40c7-b51e-7538bcdf6410",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1600x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6075009e-af12-49a9-84a1-20833f8598c4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.com/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "957240aa-42c7-4a90-b4bb-c520b8584866",
+      "comment": "",
+      "command": "click",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.com/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61493794-4fdb-4706-acfa-6f5a7487b69c",
+      "comment": "",
+      "command": "type",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "seng401g23@gmail.com"
+    }, {
+      "id": "aab0c895-00b4-4a3f-a685-f4d24917e8ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "SENG401Group#23"
+    }, {
+      "id": "e2138906-c1cd-401a-a12b-84a1a400cfe6",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f4feadc-9b9a-40d3-8aee-656620ea0927",
+      "comment": "",
+      "command": "type",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "seng401g23@gmail.comff"
+    }, {
+      "id": "de3a68e5-8f9e-4ee6-bc66-c7987d980c03",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "password"
+    }, {
+      "id": "3b2f9ce9-6859-479c-a211-4c464174d477",
+      "comment": "",
+      "command": "click",
+      "target": "id=next",
+      "targets": [
+        ["id=next", "id"],
+        ["css=#next", "css:finder"],
+        ["xpath=//button[@id='next']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba4273dd-2833-4c82-a92c-b348e41263e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pageLevel > p",
+      "targets": [
+        ["css=.pageLevel > p", "css:finder"],
+        ["xpath=//form[@id='localAccountForm']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'The email address and/or password you entered are invalid.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "150eecbf-6980-4c8d-b5f1-a2b8cae9bfd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pageLevel > p",
+      "targets": [
+        ["css=.pageLevel > p", "css:finder"],
+        ["xpath=//form[@id='localAccountForm']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'The email address and/or password you entered are invalid.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2be12ef-bf99-4a26-b8cd-14b50549633a",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.pageLevel > p",
+      "targets": [
+        ["css=.pageLevel > p", "css:finder"],
+        ["xpath=//form[@id='localAccountForm']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'The email address and/or password you entered are invalid.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b2f3a9c-dc48-4985-86a8-be5af480a037",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pageLevel > p",
+      "targets": [
+        ["css=.pageLevel > p", "css:finder"],
+        ["xpath=//form[@id='localAccountForm']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'The email address and/or password you entered are invalid.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9a73ef95-8aac-400c-969a-ca41caa1348d",
+    "name": "Register Pre-existing User",
+    "commands": [{
+      "id": "c132a5f5-e37f-42ad-820d-89477c426117",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9fafd4a-163e-4bfc-8754-c15c2c652bb5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1600x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcb530d6-7aa6-408e-b76f-8f61daf0990d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.com/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "656892a2-c743-4e1c-b267-d6f82b672282",
+      "comment": "",
+      "command": "click",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.com/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d55ecb8-a0cb-442d-a124-c9adf143f1e9",
+      "comment": "",
+      "command": "type",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "seng401g23@gmail.com"
+    }, {
+      "id": "a3d55db2-8698-409b-9beb-2bf1bb1eac82",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "SENG401Group#23"
+    }, {
+      "id": "c1d79227-5a25-47d5-8a21-c9de235ba5d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=createAccount",
+      "targets": [
+        ["id=createAccount", "id"],
+        ["linkText=Create Account", "linkText"],
+        ["css=#createAccount", "css:finder"],
+        ["xpath=//a[contains(text(),'Create Account')]", "xpath:link"],
+        ["xpath=//a[@id='createAccount']", "xpath:attributes"],
+        ["xpath=//div[@id='api']/div[2]/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/e0714dd4-784d-46d6-a278-3e29553483eb/B2C_1A_SSO_WCS_signup_signin_537/api/CombinedSigninAndSignup/unified?local=signup&csrf_token=aGNPem1CcHVVV3JaeGxpNVpCbTNRb0NFUnBHc0wwblluelJSbDg4U2ZXNUpjOG1XL0FhdVpoeCs1VmVkTHlpWVFyQW1GRzR0aG1zQ0orci9YTzd6U3c9PTsyMDIzLTAzLTE2VDAxOjI4OjM2LjA2MTMwMzdaO1dYYzgrQkQ0SVJHS0MvSFd4bXVCSVE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjo0fQ==&tx=StateProperties=eyJUSUQiOiIxNDk1MjEzYy0xZjQyLTRmMGEtOWJlMi02ZGM3ZTYyMWYyMGYifQ&p=B2C_1A_SSO_WCS_signup_signin_537')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "472690a9-c8ce-48ea-8903-f0cb26b2a27c",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7dc8be7-409d-42cf-8db7-f4e857fefdaf",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "seng401g23@gmail.com"
+    }, {
+      "id": "cf0e0c6d-d75b-42e6-8c04-4431662e653d",
+      "comment": "",
+      "command": "type",
+      "target": "id=newPassword",
+      "targets": [
+        ["id=newPassword", "id"],
+        ["css=#newPassword", "css:finder"],
+        ["xpath=//input[@id='newPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "SENG401Group#23"
+    }, {
+      "id": "252a70fc-92ee-4b6b-9ba9-f392d52261c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Password:nth-child(3) .material-icons",
+      "targets": [
+        ["css=.Password:nth-child(3) .material-icons", "css:finder"],
+        ["xpath=//div[@id='attributeList']/ul/li[3]/div/div/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"],
+        ["xpath=//i[contains(.,'visibility')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9abb414f-f094-451a-8a4b-6698e78c343b",
+      "comment": "",
+      "command": "click",
+      "target": "id=reenterPassword",
+      "targets": [
+        ["id=reenterPassword", "id"],
+        ["css=#reenterPassword", "css:finder"],
+        ["xpath=//input[@id='reenterPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[4]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "415ffbda-db2e-4828-95ae-d5206a03cdb8",
+      "comment": "",
+      "command": "type",
+      "target": "id=reenterPassword",
+      "targets": [
+        ["id=reenterPassword", "id"],
+        ["css=#reenterPassword", "css:finder"],
+        ["xpath=//input[@id='reenterPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "SENG401Group#23"
+    }, {
+      "id": "6404e820-ab94-4555-8322-5b56beee16b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Password:nth-child(4) .material-icons",
+      "targets": [
+        ["css=.Password:nth-child(4) .material-icons", "css:finder"],
+        ["xpath=//div[@id='attributeList']/ul/li[4]/div/div/i", "xpath:idRelative"],
+        ["xpath=//li[4]/div/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7aad2e9-27b5-48d8-bcaf-19aeac025667",
+      "comment": "",
+      "command": "click",
+      "target": "id=continue",
+      "targets": [
+        ["id=continue", "id"],
+        ["css=#continue", "css:finder"],
+        ["xpath=//button[@id='continue']", "xpath:attributes"],
+        ["xpath=//form[@id='attributeVerification']/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1810b7f3-68d5-4360-bf3a-2c5eb16d6be4",
+      "comment": "",
+      "command": "click",
+      "target": "id=claimVerificationServerError",
+      "targets": [
+        ["id=claimVerificationServerError", "id"],
+        ["css=#claimVerificationServerError", "css:finder"],
+        ["xpath=//div[@id='claimVerificationServerError']", "xpath:attributes"],
+        ["xpath=//form[@id='attributeVerification']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf04e4d7-d369-4a99-ba38-3aa10ac9fe9d",
+      "comment": "",
+      "command": "click",
+      "target": "id=claimVerificationServerError",
+      "targets": [
+        ["id=claimVerificationServerError", "id"],
+        ["css=#claimVerificationServerError", "css:finder"],
+        ["xpath=//div[@id='claimVerificationServerError']", "xpath:attributes"],
+        ["xpath=//form[@id='attributeVerification']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f89e7736-6258-47ec-8ffb-6695d73f7877",
+    "name": "Register New User",
+    "commands": [{
+      "id": "da0ca620-156f-4fb7-87ce-dc5362718d59",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe0236b9-d95f-48cb-885f-cdc7d00bd8b8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1600x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b4913fd-79b9-4b0b-bc37-108ce100ae4c",
+      "comment": "",
+      "command": "click",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.com/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e62c8477-d445-4be7-835c-10dadc4f486d",
+      "comment": "",
+      "command": "type",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "seng401g23@gmail.com"
+    }, {
+      "id": "70918b31-8e7b-42c1-8744-77047dc1893f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "SENG401Group#23"
+    }, {
+      "id": "87014bda-3c4e-4431-a316-65a63795ab5a",
+      "comment": "",
+      "command": "click",
+      "target": "id=createAccount",
+      "targets": [
+        ["id=createAccount", "id"],
+        ["linkText=Create Account", "linkText"],
+        ["css=#createAccount", "css:finder"],
+        ["xpath=//a[contains(text(),'Create Account')]", "xpath:link"],
+        ["xpath=//a[@id='createAccount']", "xpath:attributes"],
+        ["xpath=//div[@id='api']/div[2]/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/e0714dd4-784d-46d6-a278-3e29553483eb/B2C_1A_SSO_WCS_signup_signin_537/api/CombinedSigninAndSignup/unified?local=signup&csrf_token=YlJnMndWeWluK3Z5YWM3bDcvQnZScTFFcFRzTEY3b1pBRWQvNXd6bzFKcVNjY1RNekNyWko5NkZJUE9MbkhoZHZsUVp5UmY2RExGNkIvUVZDd1lsbWc9PTsyMDIzLTAzLTE2VDAxOjMwOjQ5LjgwODg3MDRaOzdUdWwrOVVDYTlBWUJWODJlbTBWTUE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjo0fQ==&tx=StateProperties=eyJUSUQiOiIxNDk1MjEzYy0xZjQyLTRmMGEtOWJlMi02ZGM3ZTYyMWYyMGYifQ&p=B2C_1A_SSO_WCS_signup_signin_537')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebf0ee7f-b80f-4822-b3a0-ad17dfb3054d",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22db85ef-c261-4227-babb-6fc1545e199e",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "ahadalirb1@gmail.com"
+    }, {
+      "id": "25fed534-0cb5-452d-91e5-df1002cb1e80",
+      "comment": "",
+      "command": "type",
+      "target": "id=newPassword",
+      "targets": [
+        ["id=newPassword", "id"],
+        ["css=#newPassword", "css:finder"],
+        ["xpath=//input[@id='newPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "Password#123"
+    }, {
+      "id": "d70c859b-6ff6-4c9d-b8cc-d8d67460413b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Password:nth-child(3) .material-icons",
+      "targets": [
+        ["css=.Password:nth-child(3) .material-icons", "css:finder"],
+        ["xpath=//div[@id='attributeList']/ul/li[3]/div/div/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"],
+        ["xpath=//i[contains(.,'visibility')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de3b84f0-0067-4bfe-bb26-97c97c3aeab2",
+      "comment": "",
+      "command": "click",
+      "target": "id=reenterPassword",
+      "targets": [
+        ["id=reenterPassword", "id"],
+        ["css=#reenterPassword", "css:finder"],
+        ["xpath=//input[@id='reenterPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[4]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e02ea89-aedd-4701-a008-b8fa8cb1261d",
+      "comment": "",
+      "command": "type",
+      "target": "id=reenterPassword",
+      "targets": [
+        ["id=reenterPassword", "id"],
+        ["css=#reenterPassword", "css:finder"],
+        ["xpath=//input[@id='reenterPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='attributeList']/ul/li[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//li[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "Password#123"
+    }, {
+      "id": "dfe3565b-443f-4a2b-9038-79f320f161fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=continue",
+      "targets": [
+        ["id=continue", "id"],
+        ["css=#continue", "css:finder"],
+        ["xpath=//button[@id='continue']", "xpath:attributes"],
+        ["xpath=//form[@id='attributeVerification']/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0566605c-e631-40a1-837a-3e4ccac9c381",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.costco.com/"],
+  "plugins": []
+}
