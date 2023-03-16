@@ -959,5 +959,91 @@ public class DataUtilitiesTest {
 		assertEquals("Cumulative percentage return value for index 1 should be 0.81818", 9.0 / 11.0,
 				actualCumulativePercentage.getValue(1));
 	}
+	
+	@Test
+	public void testCloneEmptyData() {
+		
+		double[][] inputData = { { }, { } };
+		double [][] expectedData = { { }, { } };
+
+		double [][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertArrayEquals(expectedData, arrayResult);
+	}
+	
+	@Test
+    public void testCloneNullValues() {
+        
+		double[][] inputData = new double[2][];
+		double[][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertTrue(DataUtilities.equal(inputData, arrayResult));
+    }
+	
+	@Test
+	public void testClonePositiveValues() {
+		
+		double[][] inputData = { { 4.0, 4.0 }, { 12.0, 14.0 } };
+		double [][] expectedData = { { 4.0, 4.0 }, { 12.0, 14.0 } };
+
+		double [][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertArrayEquals(expectedData, arrayResult);
+	}
+	
+	@Test
+	public void testCloneNegativeValues() {
+		
+		double[][] inputData = { { -4.0, -4.0 }, { -12.0, -14.0 } };
+		double [][] expectedData = { { -4.0, -4.0 }, { -12.0, -14.0 } };
+
+		double [][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertArrayEquals(expectedData, arrayResult);
+	}
+	
+	@Test
+	public void testClonePositiveDecimalValues() {
+		
+		double[][] inputData = { { 1.11, 2.22 }, { 3.33, 4.44 } };
+		double [][] expectedData = { { 1.11, 2.22 }, { 3.33, 4.44 } };
+
+		double [][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertArrayEquals(expectedData, arrayResult);
+	}
+	
+	@Test
+	public void testCloneNegativeDecimalValues() {
+		
+		double[][] inputData = { { -1.11, -2.22 }, { -3.33, -4.44 } };
+		double [][] expectedData = { { -1.11, -2.22 }, { -3.33, -4.44 } };
+
+		double [][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertArrayEquals(expectedData, arrayResult);
+	}
+	
+	@Test
+	public void testCloneLBValues() {
+		
+		double[][] inputData = { { Double.MIN_NORMAL, Double.MIN_NORMAL }, { Double.MIN_NORMAL, Double.MIN_NORMAL } };
+		double [][] expectedData = { { Double.MIN_NORMAL, Double.MIN_NORMAL }, { Double.MIN_NORMAL, Double.MIN_NORMAL } };
+
+		double [][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertArrayEquals(expectedData, arrayResult);
+	}
+	
+	@Test
+	public void testCloneUBValues() {
+		
+		double[][] inputData = { { Double.MAX_VALUE, Double.MAX_VALUE }, { Double.MAX_VALUE, Double.MAX_VALUE } };
+		double [][] expectedData = { { Double.MAX_VALUE, Double.MAX_VALUE }, { Double.MAX_VALUE, Double.MAX_VALUE } };
+
+		double [][] arrayResult = DataUtilities.clone(inputData);
+		
+		assertArrayEquals(expectedData, arrayResult);
+	}
 
 }
