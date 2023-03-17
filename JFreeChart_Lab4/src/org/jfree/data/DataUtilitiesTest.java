@@ -103,15 +103,19 @@ public class DataUtilitiesTest {
 				one(values).getColumnCount();
 				will(returnValue(2));
 				one(values).getRowCount();
-				will(returnValue(1));
+				will(returnValue(2));
 				one(values).getValue(0, 0);
 				will(returnValue(null));
 				one(values).getValue(0, 1);
 				will(returnValue(null));
+				one(values).getValue(1, 0);
+				will(returnValue(null));
+				one(values).getValue(1, 1);
+				will(returnValue(null));
 			}
 		});
 
-		double calculationResult = DataUtilities.calculateRowTotal(values, 0);
+		double calculationResult = DataUtilities.calculateRowTotal(values, 1);
 		assertEquals("Row 0 total after null + null", 0, calculationResult, .000000001d);
 	}
 
