@@ -107,7 +107,7 @@ With the additional test cases added to the Range and DataUtilities test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
-As taught in class, a mutant enhances the test suite by helping catch typical faults or seeding bugs to find bugs. Killed mutants means changing the source code changes the test results which is good as our test cases are effecting in catching faults. Meanwhile, surviving is bad and the opposite. One type of mutatnt is equivalent mutant which is that it always acts in the same behaviour as the original program. The provided example from class is `x= a + b` and `x = a - (-b)`. However, this is not interesting from a mutation testing perspective as it can not be killed. As such, the mutation score accuracy is underscored or pessimisticly inaccurate as compared to the actual mutation score accuracy.
+As taught in class, a mutant enhances the test suite by helping catch typical faults or seeding bugs to find bugs. Killed mutants means changing the source code changes the test results which is good as our test cases are effecting in catching faults. Meanwhile, surviving is bad and the opposite. One type of mutatnt is equivalent mutant which is that it always acts in the same behaviour as the original program. The provided example from class is `x= a + b` and `x = a - (-b)`. However, this is not interesting from a mutation testing perspective as it can not be killed. As such, the mutation score accuracy is understated or pessimisticly inaccurate as compared to the actual mutation score accuracy.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
