@@ -50,9 +50,9 @@ The objective of this lab is to explore mutation testing and web user interface 
 
 ## `Range.java`
 ### Original Mutation Score
-Add image here
+![image](https://user-images.githubusercontent.com/28770261/226054770-116f6a11-5ad6-4043-8fce-5cd109dc2ed1.png)
 ### Updated Mutation Score
-Add image here
+![image](https://user-images.githubusercontent.com/28770261/226055290-ad39e1c8-5eb8-4139-a633-a4027263f6ea.png)
 ### Additional Test Cases Generated
 #### `decimalConstrain()`
 This test creates a range between 0.0 and 1.0, and then calls `constrain(double value)` with `value` being 0.5. The expected output of this test is 0.5, since it is within the range. This test targets mutants that increment or decrement the value of `value`. For example, a mutant that increments 0.5 will result in `value` being 1.5. Since this is outside the range, the result will default to the upper bound 1, which is not the expected output. Prior to creating this test case, mutants survived because previous test cases did not account for a scenario in which `value` is a decimal value within a range where the difference between the upper and lower bound is no greater than 1.
@@ -73,9 +73,9 @@ This test creates a range between 0.0 and 5.0, and then calls `constrain(double 
 
 ## `DataUtilities.java`
 ### Original Mutation Score
-Add image here
+![image](https://user-images.githubusercontent.com/28770261/226055128-e6e1870f-2c82-4ceb-b541-a860aa06be78.png)
 ### Updated Mutation Score
-Add image here
+![image](https://user-images.githubusercontent.com/28770261/226054934-d01acad6-6413-4421-97d5-2005faaf9ffc.png)
 ### Additional Test Cases Generated
 
 # Analysis drawn on the effectiveness of each of the test classes
