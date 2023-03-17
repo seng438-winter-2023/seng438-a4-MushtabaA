@@ -111,6 +111,7 @@ We were able to test functionalities like Filter and Add to Cart with different 
 For some functionalities, like Search, it was not possible to automate the validation using a variable. This is because there was no way to expect what the output of the search would be until after it was completed. In these cases, we had little choice but to manually update the expected values each time the input data changed.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+Selenium is relatively straightforward to understand and use in a web development context, since it identifies elements using HTML and CSS selectors. In this way, it is likely more intuitive than Sikulix. With tools like Selenium IDE, it is also possible to create and run tests with very little programming involved, saving valuable time for developers. However, Selenium does have constraints in terms of its versatility. For instance, it cannot easily detect attributes like placeholder text in an input field. Moreover, for some functions, components have to be identified via their id attribute, which is not always possible depending on how the page was developed. Sikulix has the advantage in this capacity, since it primarily uses image recognition to detect UI components. This means it can potentially capture a much wider variety of targets than Selenium. However, this comes at the expense of accuracy, as the image recognition system may not always correctly identify a target, unlike how a CSS selector would. 
 
 # How the team work/effort was divided and managed
 
