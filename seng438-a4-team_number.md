@@ -98,11 +98,15 @@ First and foremost, we explored the webpage and made note of what functionalitie
 -  Search
 -  Filter
 
-Then, we considered the step-by-step process by which each functionality could be used. For example, in the case of Search, it required clicking on the search bar, typing in the query, and clicking on the search button. Once we determined the intended process, we considered cases of additional or erroneous user input. Finally, all the considered cases were recorded using Selenium IDE, and then appended with assert statements to ensure that the ouput was as intended. 
+Then, we considered the step-by-step process by which each functionality could be used. For example, in the case of Search, it required clicking on the search bar, typing in the query, and clicking on the search button. Once we determined the intended process, we considered cases of additional or erroneous user input. Using the same example of Search, this included a test case in which the search query was a random sequence of characters, which represents an invalid input. Finally, all the constructed cases were recorded using Selenium IDE and then appended with assert statements to ensure that the ouput was as intended. 
 
 # Explain the use of assertions and checkpoints
 
-# how did you test each functionality with different test data
+Assertions and checkpoints are utilised to ensure that the UI functionality is working as intended and has not been diverted during its execution. They both do so by checking the current value of a target against its expected value defined by the tester. The difference lies in the action that each takes if the result of the comparison is a mismatch. An assertion will stop the execution entirely and display an error message. Conversely, a checkpoint will allow the execution to continue, although it will also display an error message. Ultimately, where and how the two are used is up to the tester. However, in the majority of cases, checkpoints should be used throughout the program flow, while asserts should typically be saved for the final check or critical points in the execution flow. In our case, we did not think adding checkpoints were necessary, as our tests were short and simple enough that a single assert statement would be adequate to verify the results.
+
+# How did you test each functionality with different test data
+
+We were able to test functionalities like Search, Filter, and Add to Cart with different test data by using variables. Using the `store text` function in Selenium IDE, we assigned the value of a target to a variable, which would then be compared in an assert statement. For instance, when testing the Add to Cart functionality, we stored the name of the item being added as a variable. Then, when viewing the cart, we checked to see whether the name of the item in the cart matches the variable. This way, we are able to test adding any items to the cart, without having to manually change the expected values.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
