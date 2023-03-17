@@ -78,5 +78,7 @@ public class RegisterPreexistingUserTest {
     driver.findElement(By.id("claimVerificationServerError")).click();
     // 17 | click | id=claimVerificationServerError | 
     driver.findElement(By.id("claimVerificationServerError")).click();
+    // 18 | assertText | id=claimVerificationServerError | The email address you entered is already registered to a Costco.com account. Please enter a new email address or sign in to access your account.
+    assertThat(driver.findElement(By.id("claimVerificationServerError")).getText(), is("The email address you entered is already registered to a Costco.com account. Please enter a new email address or sign in to access your account."));
   }
 }

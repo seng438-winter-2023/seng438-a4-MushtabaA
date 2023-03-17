@@ -514,34 +514,6 @@ public class DataUtilitiesTest {
 		double actualColumnTotal = DataUtilities.calculateColumnTotal(values, 1);
 		assertEquals("The column total should be -72", expectedColumnTotal, actualColumnTotal, .000000001d);
 	}
-	
-
-
-    /**
-     * Some tests for the clone() method.
-     */
-//    @Test
-//    public void testClone() {
-//        double[][] a = new double[1][];
-//        double[][] b = DataUtilities.clone(a);
-//        assertTrue(DataUtilities.equal(a, b));
-//        a[0] = new double[] { 3.0, 4.0 };
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0] = new double[] { 3.0, 4.0 };
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a = new double[2][3];
-//        a[0][0] = 1.23;
-//        a[1][1] = Double.NaN;
-//        b = DataUtilities.clone(a);
-//        assertTrue(DataUtilities.equal(a, b));
-//
-//        a[0][0] = 99.9;
-//        assertFalse(DataUtilities.equal(a, b));
-//        b[0][0] = 99.9;
-//        assertTrue(DataUtilities.equal(a, b));
-//    }
-	
 
 	// Test a valid data parameter with positive values and negative index
 	/*
