@@ -86,7 +86,14 @@ This test was created to check the second range lower bound NaN value effect for
 This test was created to check the second range upper bound NaN value effect for the `combines(Range r1, Range r2)` method in the Range class. With the NaN upper bound, the expected output is the for the lower bound to be the lower bound of the smaller lowerBound range. Some mutants were also called by this test case as the lowerBound is lower bound of first range despite the NaN of upperBound of the Range which was not covered by the previous tests, therefore increasing the mutation score.
 #### `testGetUpperBoundNaN()`
 This test was created to check the second range upper bound NaN value effect for the `combines(Range r1, Range r2)` method in the Range class. With the NaN upper bound, the expected output is the for the upper bound to be NaN. Some mutants were also called by this test case as the upperBound is NaN regardless of the lowerBounds or upperBound of the other range of the Range which was not covered by the previous tests, therefore increasing the mutation score.
-
+#### `doubleNaNRangeTrue()`
+This test case was created to test the method isNaNRange() found in the Range class. We create a Range object both of type Double NaN and use assertTrue to check if the range isNaNRange, returning true. This method was not previously tested which is why it was able to kill many mutants and increase the mutation score.
+#### `doubleNaNRangeFalse()`
+This test case was created to test the method isNaNRange() found in the Range class. We create a Range object both of which are regular double numbers. Then we check if a NaN range does exist by calling the Range method isNaNRange() and assertFalse as it is not a NaN Range. This method was not previously tested which is why it was able to kill many mutants and increase the mutation score.
+#### `doubleUpperBoundAndNaNLowerBoundRangeFalse()`
+This test case was created to test the method isNaNRange() found in the Range class. We create a Range object, the lower bound being a NaN value and the upper bound being a number of type double. Then we check if a NaN range does exist by calling the Range method isNaNRange() and we assertFalse as there is a number as the upperbound, disqualifying the object as a NaN Range. This method was not previously tested which is why it was able to kill many mutants and increase the mutation score.
+#### `doubleLowerBoundAndNaNUpperBoundRangeFalse()`
+This test case was created to test the method isNaNRange() found in the Range class. We create a Range object, the upper bound being a NaN value and the lower bound being a number of type double. Then we check if a NaN range does exist by calling the Range method isNaNRange() and we assertFalse as there is a number as the lower bound, disqualifying the object as a NaN Range. This method was not previously tested which is why it was able to kill many mutants and increase the mutation score.
 ## `DataUtilities.java`
 ### Original Mutation Score
 ![image](https://user-images.githubusercontent.com/28770261/226055128-e6e1870f-2c82-4ceb-b541-a860aa06be78.png)
