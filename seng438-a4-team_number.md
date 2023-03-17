@@ -107,6 +107,7 @@ Assertions and checkpoints are utilised to ensure that the UI functionality is w
 # How did you test each functionality with different test data
 
 We were able to test functionalities like Filter and Add to Cart with different test data by using variables. Using the `store text` function in Selenium IDE, we assigned the value of a target to a variable, which would then be compared in an assert statement. For instance, when testing the Add to Cart functionality, we stored the name of the item being added as a variable. Then, when viewing the cart, we checked to see whether the name of the item in the cart matches the variable. This way, we are able to test adding any items to the cart, without having to manually change the expected values.  
+  
 For some functionalities, like Search, it was not possible to automate the validation using a variable. This is because there was no way to expect what the output of the search would be until after it was completed. In these cases, we had little choice but to manually update the expected values each time the input data changed.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
