@@ -143,6 +143,9 @@ Selenium is relatively straightforward to understand and use in a web developmen
 
 # How the team work/effort was divided and managed
 
+Our team intially spent time meeting to work on setting up PIT and running the mutation test on our original test suite. Once we had an adequate understanding of how mutation testing worked using PiTest, we evely set individual goals to increase mutation coverage. Each person was told to increase mutation coverage by at least 5%, and divided up the relative class based on our previous pairs. For example, Parbir and Mushtaba were a pair, therefore one of them worked on increasing mutation coverage for DataUtilities, and the other did the same respectively for Range. If we needed assistance we would reach out to our pair to keep things consistent and efficient. However, if a pair ran into a bigger, urgent issue, then we'd setup a group meeting to address it. Overall, this divide allowed us to increase mutation coverage by 10% for Range test and almost 15% for DataUtilities. 
+
+After finishing the first part, our pairs scattered into more individual work for the GUI testing. We investigated Costco, split up functionalities in order to avoid overlap and worked on our respective Selenium tests. At the end we made sure to demonstrate our tests prior to the lab to ensure everyone was on the same page and nobody was unclear of the standard of work required. 
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
