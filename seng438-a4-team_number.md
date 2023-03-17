@@ -71,7 +71,21 @@ This test creates a range between 0.0 and 5.0, and then calls `constrain(double 
 #### `NaNConstrain()`
 This test creates a range between 0.0 and 5.0, and then calls `constrain(double value)` with `value` being not a number(NaN). The expected output of this test is NaN, since the argument that was passed in is not a number. This test case was able to kill mutants because the NaN value compared to the bounds of the Range was not being checked beforehand, which also increased the mutation score.
 #### `testGetContainsNumberNotExistsLower()`
-This test was created to check the below lower bound condition of the `contains(double value)` method in the Range class. 
+This test was created to check the below lower bound condition of the `contains(double value)` method in the Range class. With a value of 19 and a range of 20 to 24, the expected output is obviously false. Some mutants were also called by this test case as the below lower bound of the Range was not covered by the previous tests, therefore increasing the mutation score.
+#### `testCombineRangeBothNull()`
+This test was created to check the both ranges as null for the `combines(Range r1, Range r2)` method in the Range class. With two null ranges, the expected output is a null combine output. Some mutants were also called by this test case as the both ranges as null of the Range was not covered by the previous tests, therefore increasing the mutation score.
+#### `testCombineUpperBoundNull()`
+This test was created to check the only the second range as null for the `combines(Range r1, Range r2)` method in the Range class. With second null range, the expected output is the r1 range. Some mutants were also called by this test case as the only the second range as null of the Range was not covered by the previous tests, therefore increasing the mutation score.
+#### `testCombineLowerBoundNull()`
+This test was created to check the only the first range as null for the `combines(Range r1, Range r2)` method in the Range class. With first null range, the expected output is the r2 range. Some mutants were also called by this test case as the only the second range as null of the Range was not covered by the previous tests, therefore increasing the mutation score.
+### `testCombineRangeValid()`
+This test was created to check the both ranges as valid for the `combines(Range r1, Range r2)` method in the Range class. With two valid ranges, the expected output is the r1.lowerBound to r2.upperBound range. Some mutants were also called by this test case as the both ranges were positive and valid as part of the Range which was not covered by the previous tests, therefore increasing the mutation score.
+#### `testGetLowerBoundNaN()`
+This test was created to check the second range lower bound NaN value effect for the `combines(Range r1, Range r2)` method in the Range class. With the NaN lower bound, the expected output is the for the lower bound to be NaN. Some mutants were also called by this test case as the lowerBound is NaN regardless of the other lowerBound of the Range which was not covered by the previous tests, therefore increasing the mutation score.
+#### `testGetLowerBoundEpsilon()`
+This test was created to check the second range upper bound NaN value effect for the `combines(Range r1, Range r2)` method in the Range class. With the NaN upper bound, the expected output is the for the lower bound to be the lower bound of the smaller lowerBound range. Some mutants were also called by this test case as the lowerBound is lower bound of first range despite the NaN of upperBound of the Range which was not covered by the previous tests, therefore increasing the mutation score.
+#### `testGetUpperBoundNaN()`
+This test was created to check the second range upper bound NaN value effect for the `combines(Range r1, Range r2)` method in the Range class. With the NaN upper bound, the expected output is the for the upper bound to be NaN. Some mutants were also called by this test case as the upperBound is NaN regardless of the lowerBounds or upperBound of the other range of the Range which was not covered by the previous tests, therefore increasing the mutation score.
 
 ## `DataUtilities.java`
 ### Original Mutation Score
