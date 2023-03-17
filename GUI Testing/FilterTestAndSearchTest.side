@@ -1,0 +1,318 @@
+{
+  "id": "0076dc31-365b-44b2-aebf-690092197174",
+  "version": "2.0",
+  "name": "FilterTestAndSearchTest",
+  "url": "https://www.costco.com/",
+  "tests": [{
+    "id": "a700a05c-1431-4800-a2c2-f88beedff209",
+    "name": "TestValidSearch",
+    "commands": [{
+      "id": "1f435426-8b16-4af1-a84b-b24e85d284c2",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "717c5374-6bc6-4789-b1f7-bac1490175d9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1735x750",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a349984e-cc87-4d55-bd1f-034c1b4d531d",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e993f25c-a41b-4177-907e-207355e632d8",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "fridge"
+    }, {
+      "id": "8066e11d-c2c9-45ce-b512-0a769f405027",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4) > .co-search-thin",
+      "targets": [
+        ["css=.btn:nth-child(4) > .co-search-thin", "css:finder"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82c9bc69-d701-4343-b209-b8cb8fe67ae4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.t1-style",
+      "targets": [
+        ["css=.t1-style", "css:finder"],
+        ["xpath=//div[@id='category-name-header']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Refrigerators')]", "xpath:innerText"]
+      ],
+      "value": "Refrigerators"
+    }]
+  }, {
+    "id": "a0bc73f0-d94b-4b43-8d5d-e29fd2abcb92",
+    "name": "TestInvalidSearch",
+    "commands": [{
+      "id": "617451dc-1c75-4580-ae1a-6dd03ec01f74",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ac32148-a97d-45d8-802f-1b9187fc8485",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1735x750",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec21b24e-50bb-49a4-9bd8-dd253297fd04",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ca55f62-d9ad-44e8-8b0f-49636b1633d0",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "sdfsdfsd"
+    }, {
+      "id": "48b827f0-370a-429e-9a58-83074ad7a515",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99eba4d0-5ae2-400e-a55b-9cc4e5be8ce5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1:nth-child(1)",
+      "targets": [
+        ["css=h1:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='search-results']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'We were not able to find a match. Try another search or shop related products.')]", "xpath:innerText"]
+      ],
+      "value": "We were not able to find a match. Try another search or shop related products."
+    }]
+  }, {
+    "id": "76cb312a-d4b0-49d1-9a71-66a5da307e1c",
+    "name": "TestOneFilter",
+    "commands": [{
+      "id": "d1e6b001-e0df-481c-a973-c6162678e467",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8b3eddb-4f4c-4ad8-91f6-95e4ae779cc0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1735x750",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9aebe6c1-8683-4184-8329-2f8772d29e17",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "sofa"
+    }, {
+      "id": "faf23064-b549-474a-8585-bd00af2b9669",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4) > .co-search-thin",
+      "targets": [
+        ["css=.btn:nth-child(4) > .co-search-thin", "css:finder"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aab659a6-b827-4790-a885-d6a887880f29",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.table-cell:nth-child(6) > span",
+      "targets": [
+        ["css=.table-cell:nth-child(6) > span", "css:finder"],
+        ["xpath=//div[6]/span", "xpath:position"]
+      ],
+      "value": "numberOfItems"
+    }, {
+      "id": "90b3f05f-6214-4ade-b4d5-ae4408bda9ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=#accordion-filter_collapse-1 .style-check:nth-child(1) span:nth-child(1)",
+      "targets": [
+        ["css=#accordion-filter_collapse-1 .style-check:nth-child(1) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='accordion-filter_collapse-1']/div/span/div/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67515fe1-f09e-42a7-9f4e-f53f47f638fe",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.table-cell:nth-child(6) > span",
+      "targets": [],
+      "value": "numberOfItems"
+    }]
+  }, {
+    "id": "8404cf7f-34a3-4b56-87ad-b50954037948",
+    "name": "TestMultipleFilters",
+    "commands": [{
+      "id": "1c200493-e1bf-4dcd-9e00-df453a81a0b9",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f02f5e4-2047-474c-bcc4-9de40444bf14",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1735x750",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5bb43bf-9517-4da6-b49e-231cdaa9f325",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "blender"
+    }, {
+      "id": "03eea7af-d853-4e1f-be93-f391b40e5a9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4) > .co-search-thin",
+      "targets": [
+        ["css=.btn:nth-child(4) > .co-search-thin", "css:finder"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8d8506c-da45-46bb-aa9f-26bf5b7214e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#accordion-filter_collapse-1 .style-check:nth-child(2) span:nth-child(1)",
+      "targets": [
+        ["css=#accordion-filter_collapse-1 .style-check:nth-child(2) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='accordion-filter_collapse-1']/div/span[2]/div/label/span", "xpath:idRelative"],
+        ["xpath=//span[2]/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "764345d8-ea3a-48ad-ba40-71ac02abf5a5",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.table-cell:nth-child(6) > span",
+      "targets": [
+        ["css=.table-cell:nth-child(6)", "css:finder"],
+        ["xpath=//div/div[6]", "xpath:position"]
+      ],
+      "value": "numberOfItemsAfterOneFilter"
+    }, {
+      "id": "0ec6fbf4-ef76-4a68-a690-2af3b0ba6766",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Brand",
+      "targets": [
+        ["linkText=Brand", "linkText"],
+        ["css=#accordion-filter_heading-5 .collapsed", "css:finder"],
+        ["xpath=//a[contains(text(),'Brand')]", "xpath:link"],
+        ["xpath=//div[@id='accordion-filter_heading-5']/legend/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#accordion-filter_collapse-5')]", "xpath:href"],
+        ["xpath=//fieldset[5]/div/legend/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Brand')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7c20f92-40ff-497d-b8e9-d54d49dd7be9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#accordion-filter_collapse-5 .style-check:nth-child(2) span:nth-child(1)",
+      "targets": [
+        ["css=#accordion-filter_collapse-5 .style-check:nth-child(2) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='accordion-filter_collapse-5']/div/span[2]/div/label/span", "xpath:idRelative"],
+        ["xpath=//fieldset[5]/div[2]/div/span[2]/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1494f127-a393-47b5-a543-20a516385cd3",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.table-cell:nth-child(6) > span",
+      "targets": [],
+      "value": "numberOfItemsAfterOneFilter"
+    }]
+  }],
+  "suites": [{
+    "id": "8d4fa0f6-16f3-4f2a-9325-da841b14c472",
+    "name": "",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a700a05c-1431-4800-a2c2-f88beedff209"]
+  }],
+  "urls": ["https://www.costco.com/"],
+  "plugins": []
+}
