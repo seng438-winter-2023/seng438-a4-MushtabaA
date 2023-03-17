@@ -86,11 +86,23 @@ Add image here
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
-# Explain your SELENUIM test case design process
+# Explain your SELENIUM test case design process
+
+First and foremost, we explored the webpage and made note of what functionalities it offered. This provided us with an understanding of which core UI components we felt needed to be tested. The functionalities we ultimately decided to test were:
+-  Login
+-  Register
+-  Add to Cart
+-  Remove from Cart
+-  Sign Out
+-  Add to List
+-  Search
+-  Filter
+
+Then, we considered the step-by-step process by which each functionality could be used. For example, in the case of Search, it required clicking on the search bar, typing in the query, and clicking on the search button. Once we determined the intended process, we considered cases of additional or erroneous user input. Finally, all the considered cases were recorded using Selenium IDE, and then appended with assert statements to ensure that the ouput was as intended. 
 
 # Explain the use of assertions and checkpoints
 
-# how did you test each functionaity with different test data
+# how did you test each functionality with different test data
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
