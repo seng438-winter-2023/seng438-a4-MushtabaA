@@ -2,15 +2,16 @@
 
 **Lab. Report \#4 – Mutation Testing and Web app testing**
 
-| Group \#:      |     |
+| Group \#:      |  24  |
 | -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Student Names: |  Ahad Ali   |
+|                |  Mushtaba Al Yasseen   |
+|                |  Parbir Lehal   |
+|                |  Athul Rajagopal   |
 
 # Introduction
 
+The objective of this lab is to explore mutation testing and web user interface (UI) testing in a controlled environment. To perform mutation testing, we used PITest, which automates the process and generates several mutations, which are in turn reported as either surviving or killed. After analyzing the results, we created additional test cases to kill mutants which were previously surviving, thereby improving the mutation score. Web UI testing was carried out using Selenium IDE, which is a browser extension that can record and replay actions on a webpage. Selenium was used to test and confirm that the webpage functionalities were working as intended.
 
 # Analysis of 10 Mutants of the Range class 
 
