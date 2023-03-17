@@ -1,0 +1,195 @@
+{
+  "id": "c959772a-34be-415b-a93f-a3091551cc4c",
+  "version": "2.0",
+  "name": "AddToList",
+  "url": "https://www.costco.com",
+  "tests": [{
+    "id": "c17bf3dd-86c2-4ed1-8be4-53043af60144",
+    "name": "AddToList",
+    "commands": [{
+      "id": "7de5f638-050b-42d2-9370-17ee8da86c61",
+      "comment": "",
+      "command": "open",
+      "target": "/made-in-nature-usda-organic-dates-40-oz%2c-2-pack.product.100666147.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc30d9e3-161d-4ae8-9ae4-583ad27cb906",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x799",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d313aea9-6a5b-4de9-ab76-2fbde1328f83",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-list-button",
+      "targets": [
+        ["id=add-to-list-button", "id"],
+        ["css=#add-to-list-button", "css:finder"],
+        ["xpath=//button[@id='add-to-list-button']", "xpath:attributes"],
+        ["xpath=//div[@id='add-to-list']/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db06751f-c7b8-4a0f-af98-646c5633f610",
+      "comment": "",
+      "command": "click",
+      "target": "id=list-select-dropdown",
+      "targets": [
+        ["id=list-select-dropdown", "id"],
+        ["name=listId", "name"],
+        ["css=#list-select-dropdown", "css:finder"],
+        ["xpath=//select[@id='list-select-dropdown']", "xpath:attributes"],
+        ["xpath=//form[@id='addtolistform']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2231d48c-ba30-4242-b007-c4d13ab87380",
+      "comment": "",
+      "command": "click",
+      "target": "id=costcoModalBtn2",
+      "targets": [
+        ["id=costcoModalBtn2", "id"],
+        ["css=#costcoModalBtn2", "css:finder"],
+        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
+        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e3b5634-3de2-4a5f-a510-c771eb93c546",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=costcoModalBtn2",
+      "targets": [
+        ["id=costcoModalBtn2", "id"],
+        ["css=#costcoModalBtn2", "css:finder"],
+        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
+        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28dccdee-9931-46eb-8352-d0f4b244c4c3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=costcoModalBtn2",
+      "targets": [
+        ["id=costcoModalBtn2", "id"],
+        ["css=#costcoModalBtn2", "css:finder"],
+        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
+        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "125b0314-08f8-4993-9921-a6ac4fb14576",
+      "comment": "",
+      "command": "click",
+      "target": "id=list-select-dropdown",
+      "targets": [
+        ["id=list-select-dropdown", "id"],
+        ["name=listId", "name"],
+        ["css=#list-select-dropdown", "css:finder"],
+        ["xpath=//select[@id='list-select-dropdown']", "xpath:attributes"],
+        ["xpath=//form[@id='addtolistform']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5afa6deb-5560-4efc-837d-750e81b95030",
+      "comment": "",
+      "command": "select",
+      "target": "id=list-select-dropdown",
+      "targets": [],
+      "value": "label=Create New List"
+    }, {
+      "id": "ae5249a7-686c-4b88-b0a9-d3e95c3376c2",
+      "comment": "",
+      "command": "click",
+      "target": "id=listidname",
+      "targets": [
+        ["id=listidname", "id"],
+        ["name=listidname", "name"],
+        ["css=#listidname", "css:finder"],
+        ["xpath=//input[@id='listidname']", "xpath:attributes"],
+        ["xpath=//form[@id='addtonewlistform']/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "941631b2-25cf-4196-9dbd-dd8c1928440e",
+      "comment": "",
+      "command": "type",
+      "target": "id=listidname",
+      "targets": [
+        ["id=listidname", "id"],
+        ["name=listidname", "name"],
+        ["css=#listidname", "css:finder"],
+        ["xpath=//input[@id='listidname']", "xpath:attributes"],
+        ["xpath=//form[@id='addtonewlistform']/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "List"
+    }, {
+      "id": "95abb4fa-eac1-46c2-ae9b-95a39ae2839b",
+      "comment": "",
+      "command": "click",
+      "target": "id=costcoModalBtn2",
+      "targets": [
+        ["id=costcoModalBtn2", "id"],
+        ["css=#costcoModalBtn2", "css:finder"],
+        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
+        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54954164-151e-4cd6-b5a8-adc4f020a2ab",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=costcoModalBtn2",
+      "targets": [
+        ["id=costcoModalBtn2", "id"],
+        ["css=#costcoModalBtn2", "css:finder"],
+        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
+        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3c80786-bea1-4b73-a1ee-8559a86ebe7e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=costcoModalBtn2",
+      "targets": [
+        ["id=costcoModalBtn2", "id"],
+        ["css=#costcoModalBtn2", "css:finder"],
+        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
+        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "424e871c-2e86-465c-b390-0c37397ec9ca",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c17bf3dd-86c2-4ed1-8be4-53043af60144"]
+  }],
+  "urls": ["https://www.costco.com/"],
+  "plugins": []
+}

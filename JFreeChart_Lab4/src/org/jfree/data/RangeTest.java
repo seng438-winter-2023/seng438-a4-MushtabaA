@@ -278,25 +278,29 @@ public class RangeTest {
 
 	// -------------getUpperBound() Test End------------------
 
-	@Test
-	public void doubleNaNRangeTrue() {
-		assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
-	}
+	//Testing NaN range function to be true
+    @Test
+    public void doubleNaNRangeTrue() {
+        assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
+    }
 
-	@Test
-	public void doubleNaNRangeFalse() {
-		assertFalse(new Range(1.0, 5.0).isNaNRange());
-	}
+    //Testing Double values against NaNRange Function to be false
+    @Test
+    public void doubleNaNRangeFalse() {
+        assertFalse(new Range(1.0, 5.0).isNaNRange());
+    }
 
-	@Test
-	public void doubleUpperBoundAndNaNLowerBoundFalse() {
-		assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
-	}
+    //Testing Double Upper Bound and NaN Lower Bound to be False
+    @Test
+    public void doubleUpperBoundAndNaNLowerBoundRangeFalse() {
+        assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
+    }
 
-	@Test
-	public void doubleLowerBoundAndNaNUpperBoundFalse() {
-		assertFalse(new Range(2.0, Double.NaN).isNaNRange());
-	}
+    //Testing Double Lower Bound and NaN Upper Bound to be False
+    @Test
+    public void doubleLowerBoundAndNaNUpperBoundRangeFalse() {
+        assertFalse(new Range(2.0, Double.NaN).isNaNRange());
+    }
 
 //    @Test
 //    public void testIsNaNRange() {

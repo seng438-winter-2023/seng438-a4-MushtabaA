@@ -1,0 +1,61 @@
+{
+  "id": "a941f870-e829-415a-a24f-84296c0b90a4",
+  "version": "2.0",
+  "name": "logout",
+  "url": "https://www.costco.com",
+  "tests": [{
+    "id": "444ae10f-27d6-4b95-b2da-7d0a35645fea",
+    "name": "Logout",
+    "commands": [{
+      "id": "60b8c2f1-8833-485e-8fea-1d518475f5f1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ebe7e25-e875-462e-897b-5a72226df5c0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x799",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57e0c709-6a62-442f-be3c-519ec3dacd9e",
+      "comment": "",
+      "command": "click",
+      "target": "id=myaccount-react-d",
+      "targets": [
+        ["id=myaccount-react-d", "id"],
+        ["css=#myaccount-react-d", "css:finder"],
+        ["xpath=//button[@id='myaccount-react-d']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62e8d8aa-3174-4464-a800-5a8b2aa6f4a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1ljkbn6",
+      "targets": [
+        ["css=.css-1ljkbn6", "css:finder"],
+        ["xpath=//li[@id='mi_signout']/a/span", "xpath:idRelative"],
+        ["xpath=//li[11]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "983b75de-fe01-43d2-bc6f-75a94e17c1e4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["444ae10f-27d6-4b95-b2da-7d0a35645fea"]
+  }],
+  "urls": ["https://www.costco.com/"],
+  "plugins": []
+}
