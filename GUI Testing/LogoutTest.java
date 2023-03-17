@@ -42,5 +42,6 @@ public class LogoutTest {
     driver.manage().window().setSize(new Dimension(1440, 799));
     driver.findElement(By.id("myaccount-react-d")).click();
     driver.findElement(By.cssSelector(".css-1ljkbn6")).click();
+    assertThat(driver.findElement(By.id("header_sign_in")).getText(), is("Sign In / Register"));
   }
 }

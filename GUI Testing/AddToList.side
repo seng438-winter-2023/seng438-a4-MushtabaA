@@ -1,27 +1,53 @@
 {
-  "id": "c959772a-34be-415b-a93f-a3091551cc4c",
+  "id": "a941f870-e829-415a-a24f-84296c0b90a4",
   "version": "2.0",
   "name": "AddToList",
-  "url": "https://www.costco.com",
+  "url": "https://www.costco.com/.product.100780581.html?ADBUTLERID=homepage_item_driver_sharkvacuum",
   "tests": [{
-    "id": "c17bf3dd-86c2-4ed1-8be4-53043af60144",
+    "id": "b45c20b8-3a19-4504-99e0-0c71873b4724",
     "name": "AddToList",
     "commands": [{
-      "id": "7de5f638-050b-42d2-9370-17ee8da86c61",
+      "id": "4b043a40-9495-40a5-bdf7-faaf5d8775b8",
       "comment": "",
       "command": "open",
-      "target": "/made-in-nature-usda-organic-dates-40-oz%2c-2-pack.product.100666147.html",
+      "target": "https://www.costco.com/.product.100780581.html?ADBUTLERID=homepage_item_driver_sharkvacuum",
       "targets": [],
       "value": ""
     }, {
-      "id": "cc30d9e3-161d-4ae8-9ae4-583ad27cb906",
+      "id": "90f14088-8ca1-42cf-afd7-7ff5ac14d72f",
       "comment": "",
       "command": "setWindowSize",
       "target": "1440x799",
       "targets": [],
       "value": ""
     }, {
-      "id": "d313aea9-6a5b-4de9-ab76-2fbde1328f83",
+      "id": "e7d30789-de06-44e7-97f3-ed4ddae6e268",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,12)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f5365fe-3951-4bab-8362-0192faac41a9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,346)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ffd01e59-e5db-43a5-baed-8153a9e72f37",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h1:nth-child(2)",
+      "targets": [
+        ["css=h1:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Shark Navigator Lift-Away Upright Vacuum with Self-Cleaning Brushroll')]", "xpath:innerText"]
+      ],
+      "value": "itemName"
+    }, {
+      "id": "a70863b4-824a-4f39-8776-cce7e5b790f6",
       "comment": "",
       "command": "click",
       "target": "id=add-to-list-button",
@@ -34,7 +60,7 @@
       ],
       "value": ""
     }, {
-      "id": "db06751f-c7b8-4a0f-af98-646c5633f610",
+      "id": "5901512a-2f1b-4463-9cb1-275d2fa48caf",
       "comment": "",
       "command": "click",
       "target": "id=list-select-dropdown",
@@ -48,98 +74,14 @@
       ],
       "value": ""
     }, {
-      "id": "2231d48c-ba30-4242-b007-c4d13ab87380",
-      "comment": "",
-      "command": "click",
-      "target": "id=costcoModalBtn2",
-      "targets": [
-        ["id=costcoModalBtn2", "id"],
-        ["css=#costcoModalBtn2", "css:finder"],
-        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
-        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "6e3b5634-3de2-4a5f-a510-c771eb93c546",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "id=costcoModalBtn2",
-      "targets": [
-        ["id=costcoModalBtn2", "id"],
-        ["css=#costcoModalBtn2", "css:finder"],
-        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
-        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "28dccdee-9931-46eb-8352-d0f4b244c4c3",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "id=costcoModalBtn2",
-      "targets": [
-        ["id=costcoModalBtn2", "id"],
-        ["css=#costcoModalBtn2", "css:finder"],
-        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
-        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "125b0314-08f8-4993-9921-a6ac4fb14576",
-      "comment": "",
-      "command": "click",
-      "target": "id=list-select-dropdown",
-      "targets": [
-        ["id=list-select-dropdown", "id"],
-        ["name=listId", "name"],
-        ["css=#list-select-dropdown", "css:finder"],
-        ["xpath=//select[@id='list-select-dropdown']", "xpath:attributes"],
-        ["xpath=//form[@id='addtolistform']/div[2]/div/select", "xpath:idRelative"],
-        ["xpath=//form/div[2]/div/select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "5afa6deb-5560-4efc-837d-750e81b95030",
+      "id": "200e144f-2dd3-433b-9128-77622e7932ac",
       "comment": "",
       "command": "select",
       "target": "id=list-select-dropdown",
       "targets": [],
-      "value": "label=Create New List"
+      "value": "label=List"
     }, {
-      "id": "ae5249a7-686c-4b88-b0a9-d3e95c3376c2",
-      "comment": "",
-      "command": "click",
-      "target": "id=listidname",
-      "targets": [
-        ["id=listidname", "id"],
-        ["name=listidname", "name"],
-        ["css=#listidname", "css:finder"],
-        ["xpath=//input[@id='listidname']", "xpath:attributes"],
-        ["xpath=//form[@id='addtonewlistform']/div[2]/div/div/input", "xpath:idRelative"],
-        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "941631b2-25cf-4196-9dbd-dd8c1928440e",
-      "comment": "",
-      "command": "type",
-      "target": "id=listidname",
-      "targets": [
-        ["id=listidname", "id"],
-        ["name=listidname", "name"],
-        ["css=#listidname", "css:finder"],
-        ["xpath=//input[@id='listidname']", "xpath:attributes"],
-        ["xpath=//form[@id='addtonewlistform']/div[2]/div/div/input", "xpath:idRelative"],
-        ["xpath=//form/div[2]/div/div/input", "xpath:position"]
-      ],
-      "value": "List"
-    }, {
-      "id": "95abb4fa-eac1-46c2-ae9b-95a39ae2839b",
+      "id": "94e4e93f-1e26-4be3-8734-4fcce9cebb36",
       "comment": "",
       "command": "click",
       "target": "id=costcoModalBtn2",
@@ -148,12 +90,12 @@
         ["css=#costcoModalBtn2", "css:finder"],
         ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
         ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Create List')]", "xpath:innerText"]
+        ["xpath=//div[11]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "54954164-151e-4cd6-b5a8-adc4f020a2ab",
+      "id": "a91a39b4-2775-4d58-b313-f86a0d335d48",
       "comment": "",
       "command": "mouseOver",
       "target": "id=costcoModalBtn2",
@@ -162,12 +104,12 @@
         ["css=#costcoModalBtn2", "css:finder"],
         ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
         ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Create List')]", "xpath:innerText"]
+        ["xpath=//div[11]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "e3c80786-bea1-4b73-a1ee-8559a86ebe7e",
+      "id": "e8567277-a4e1-4e7f-80a3-5acd47508516",
       "comment": "",
       "command": "mouseOut",
       "target": "id=costcoModalBtn2",
@@ -176,20 +118,51 @@
         ["css=#costcoModalBtn2", "css:finder"],
         ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
         ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
-        ["xpath=//div[10]/div/div/div[3]/div/div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Create List')]", "xpath:innerText"]
+        ["xpath=//div[11]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Item')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "68899ab6-8886-4185-91bb-056bde7cfe49",
+      "comment": "",
+      "command": "click",
+      "target": "id=costcoModalBtn2",
+      "targets": [
+        ["id=costcoModalBtn2", "id"],
+        ["css=#costcoModalBtn2", "css:finder"],
+        ["xpath=//button[@id='costcoModalBtn2']", "xpath:attributes"],
+        ["xpath=//div[@id='costcoModal']/div/div/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[11]/div/div/div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6196500-b19c-4150-bf15-b50516033ada",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=wishlist_product_2429514",
+      "targets": [
+        ["id=wishlist_product_2429514", "id"],
+        ["linkText=Shark Navigator Lift-Away Upright Vacuum with Self-Cleaning Brushroll", "linkText"],
+        ["css=#wishlist_product_2429514", "css:finder"],
+        ["xpath=//a[contains(text(),'Shark Navigator Lift-Away Upright Vacuum with Self-Cleaning Brushroll')]", "xpath:link"],
+        ["xpath=//a[@id='wishlist_product_2429514']", "xpath:attributes"],
+        ["xpath=//div[@id='2429514']/div/div/div/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, ' https://www.costco.com/.product.4752553.html ')]", "xpath:href"],
+        ["xpath=//div/div/div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shark Navigator Lift-Away Upright Vacuum with Self-Cleaning Brushroll')]", "xpath:innerText"]
+      ],
+      "value": "${itemName}"
     }]
   }],
   "suites": [{
-    "id": "424e871c-2e86-465c-b390-0c37397ec9ca",
+    "id": "983b75de-fe01-43d2-bc6f-75a94e17c1e4",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["c17bf3dd-86c2-4ed1-8be4-53043af60144"]
+    "tests": []
   }],
-  "urls": ["https://www.costco.com/"],
+  "urls": ["https://www.costco.com/", "https://www.costco.com/.product.100780581.html?ADBUTLERID=homepage_item_driver_sharkvacuum"],
   "plugins": []
 }

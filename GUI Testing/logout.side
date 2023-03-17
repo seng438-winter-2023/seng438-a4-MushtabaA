@@ -46,6 +46,13 @@
         ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "79e449d2-1b4e-4671-9106-151f40ba1663",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=header_sign_in",
+      "targets": [],
+      "value": "Sign In / Register"
     }]
   }],
   "suites": [{

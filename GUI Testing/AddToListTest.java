@@ -38,28 +38,17 @@ public class AddToListTest {
   }
   @Test
   public void addToList() {
-    driver.get("https://www.costco.com/made-in-nature-usda-organic-dates-40-oz%2c-2-pack.product.100666147.html");
+    driver.get("https://www.costco.com/.product.100780581.html?ADBUTLERID=homepage_item_driver_sharkvacuum");
     driver.manage().window().setSize(new Dimension(1440, 799));
+    js.executeScript("window.scrollTo(0,12)");
+    js.executeScript("window.scrollTo(0,346)");
+    vars.put("itemName", driver.findElement(By.cssSelector("h1:nth-child(2)")).getText());
     driver.findElement(By.id("add-to-list-button")).click();
-    driver.findElement(By.id("list-select-dropdown")).click();
-    driver.findElement(By.id("costcoModalBtn2")).click();
-    {
-      WebElement element = driver.findElement(By.id("costcoModalBtn2"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element).perform();
-    }
-    {
-      WebElement element = driver.findElement(By.tagName("body"));
-      Actions builder = new Actions(driver);
-      builder.moveToElement(element, 0, 0).perform();
-    }
     driver.findElement(By.id("list-select-dropdown")).click();
     {
       WebElement dropdown = driver.findElement(By.id("list-select-dropdown"));
-      dropdown.findElement(By.xpath("//option[. = 'Create New List']")).click();
+      dropdown.findElement(By.xpath("//option[. = 'List']")).click();
     }
-    driver.findElement(By.id("listidname")).click();
-    driver.findElement(By.id("listidname")).sendKeys("List");
     driver.findElement(By.id("costcoModalBtn2")).click();
     {
       WebElement element = driver.findElement(By.id("costcoModalBtn2"));
@@ -71,5 +60,7 @@ public class AddToListTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element, 0, 0).perform();
     }
+    driver.findElement(By.id("costcoModalBtn2")).click();
+    assertThat(driver.findElement(By.id("wishlist_product_2429514")).getText(), is("vars.get(\"itemName\").toString()"));
   }
 }
