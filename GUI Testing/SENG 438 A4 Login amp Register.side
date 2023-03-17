@@ -174,6 +174,20 @@
         ["xpath=//div/div/div/div[2]/input", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "7987326a-3af6-40bf-8697-c286e183c68a",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=myaccount-react-d",
+      "targets": [
+        ["id=myaccount-react-d", "id"],
+        ["css=#myaccount-react-d", "css:finder"],
+        ["xpath=//button[@id='myaccount-react-d']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": "Account"
     }]
   }, {
     "id": "5f9d58d7-f3a2-418b-ad3c-5b891db53b72",
@@ -358,6 +372,18 @@
         ["xpath=//p[contains(.,'The email address and/or password you entered are invalid.')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "9a57a0ff-4c87-444d-97d0-b5c93c510403",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.pageLevel > p",
+      "targets": [
+        ["css=.pageLevel > p", "css:finder"],
+        ["xpath=//form[@id='localAccountForm']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'The email address and/or password you entered are invalid.')]", "xpath:innerText"]
+      ],
+      "value": "The email address and/or password you entered are invalid."
     }]
   }, {
     "id": "9a73ef95-8aac-400c-969a-ca41caa1348d",
@@ -583,6 +609,19 @@
         ["xpath=//div[4]", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "16aaee3d-b211-494b-841f-465dbf3d2010",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=claimVerificationServerError",
+      "targets": [
+        ["id=claimVerificationServerError", "id"],
+        ["css=#claimVerificationServerError", "css:finder"],
+        ["xpath=//div[@id='claimVerificationServerError']", "xpath:attributes"],
+        ["xpath=//form[@id='attributeVerification']/div[4]", "xpath:idRelative"],
+        ["xpath=//form/div[4]", "xpath:position"]
+      ],
+      "value": "The email address you entered is already registered to a Costco.com account. Please enter a new email address or sign in to access your account."
     }]
   }, {
     "id": "f89e7736-6258-47ec-8ffb-6695d73f7877",
@@ -688,7 +727,7 @@
         ["xpath=//div[@id='attributeList']/ul/li[2]/div/div/input", "xpath:idRelative"],
         ["xpath=//li[2]/div/div/input", "xpath:position"]
       ],
-      "value": "ahadalirb1@gmail.com"
+      "value": "chickenwhale123@gmail.com"
     }, {
       "id": "25fed534-0cb5-452d-91e5-df1002cb1e80",
       "comment": "",
@@ -754,6 +793,20 @@
         ["xpath=//button[contains(.,'Create Account')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "daf0362c-5dd5-4192-b397-9bada2f37299",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=myaccount-react-d",
+      "targets": [
+        ["id=myaccount-react-d", "id"],
+        ["css=#myaccount-react-d", "css:finder"],
+        ["xpath=//button[@id='myaccount-react-d']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": "Account"
     }]
   }],
   "suites": [{

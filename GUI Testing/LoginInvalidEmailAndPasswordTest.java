@@ -76,5 +76,7 @@ public class LoginInvalidEmailAndPasswordTest {
     }
     // 14 | click | css=.pageLevel > p | 
     driver.findElement(By.cssSelector(".pageLevel > p")).click();
+    // 15 | assertText | css=.pageLevel > p | The email address and/or password you entered are invalid.
+    assertThat(driver.findElement(By.cssSelector(".pageLevel > p")).getText(), is("The email address and/or password you entered are invalid."));
   }
 }

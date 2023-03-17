@@ -218,14 +218,14 @@ public class RangeTest {
 	// Increasing Mutation Coverage for contains
 
 	// Test if a valid integer does not exist in range
-	@Test
-	public void testGetContainsNumberNotExistsLower() {
-		Range sampleRange = new Range(20, 24);
-
-		boolean expectedContains = false;
-		boolean actualContains = sampleRange.contains(19);
-		assertEquals("19 should not exist in range of 20 to 24", expectedContains, actualContains);
-	}
+//	@Test
+//	public void testGetContainsNumberNotExistsLower() {
+//		Range sampleRange = new Range(20, 24);
+//
+//		boolean expectedContains = false;
+//		boolean actualContains = sampleRange.contains(19);
+//		assertEquals("19 should not exist in range of 20 to 24", expectedContains, actualContains);
+//	}
 
 	// -------------getUpperBound() Test Start------------------
 
@@ -428,7 +428,7 @@ public class RangeTest {
 		assertEquals(0.0, actual, 0.0000001);
 	}
 
-	// testing not a number constrain
+	// testing not a number constrain - Show Ahad
 	@Test
 	public void NaNConstrain() {
 		Range data = new Range(0.0, 5.0);

@@ -72,5 +72,7 @@ public class LoginValidEmailAndPasswordTest {
     js.executeScript("window.scrollTo(0,113)");
     // 14 | click | id=shopAsNonMemberBtn | 
     driver.findElement(By.id("shopAsNonMemberBtn")).click();
+    // 15 | assertText | id=myaccount-react-d | Account
+    assertThat(driver.findElement(By.id("myaccount-react-d")).getText(), is("Account"));
   }
 }

@@ -54,8 +54,8 @@ public class RegisterNewUserTest {
     driver.findElement(By.id("createAccount")).click();
     // 7 | click | id=email | 
     driver.findElement(By.id("email")).click();
-    // 8 | type | id=email | ahadalirb1@gmail.com
-    driver.findElement(By.id("email")).sendKeys("ahadalirb1@gmail.com");
+    // 8 | type | id=email | chickenwhale123@gmail.com
+    driver.findElement(By.id("email")).sendKeys("chickenwhale123@gmail.com");
     // 9 | type | id=newPassword | Password#123
     driver.findElement(By.id("newPassword")).sendKeys("Password#123");
     // 10 | click | css=.Password:nth-child(3) .material-icons | 
@@ -66,5 +66,7 @@ public class RegisterNewUserTest {
     driver.findElement(By.id("reenterPassword")).sendKeys("Password#123");
     // 13 | click | id=continue | 
     driver.findElement(By.id("continue")).click();
+    // 14 | assertText | id=myaccount-react-d | Account
+    assertThat(driver.findElement(By.id("myaccount-react-d")).getText(), is("Account"));
   }
 }
