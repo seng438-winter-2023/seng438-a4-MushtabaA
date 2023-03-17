@@ -107,6 +107,9 @@ This test case was created to test the method isNaNRange() found in the Range cl
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
+Mutation scores are dependent on the assassination of mutants by test cases. Generally speaking, our pre existing test cases covered many of the mutants. It became difficult and sometimes impossible to achieve 100% mutation coverage because of uncontrollable conditions. For example, when trying to kill the mutant (a++) for the method of getUpperBound(). We realized this mutant is impossible to kill because it is incrementing after the value is returned, therefore, our test cases have no reach to alter/kill this mutant. Range.java lacked overall mutant coverage prior to starting the lab. This is because of the large number of methods pertaining to this class. Many of the coverage increase we were able to achieve was through creating test cases for methods that were not previously tested. Whereas, DataUtilities.java had a higher pre existing mutation score, due to having test cases that covered all methods, making it harder to increase. Overall, our team used PIT statement checks to 
+increase our mutation score, and understand that 100% coverage isn’t attainable. 
+
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
 # Explain your SELENIUM test case design process
