@@ -45,6 +45,7 @@ public class TestRemoveFromCartTest {
     // 2 | setWindowSize | 1936x1048 | 
     driver.manage().window().setSize(new Dimension(1936, 1048));
     // 3 | click | id=remove-serial_1926344178 | 
+    // Since Costco randomly generates an ID every time, the ID must be taken after adding the product to the cart in order for this command to pass
     driver.findElement(By.id("remove-serial_1926344178")).click();
   }
 }

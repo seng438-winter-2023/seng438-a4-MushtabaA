@@ -42,25 +42,27 @@ public class TestAddToCartTest {
     // Step # | name | target | value
     // 1 | open | https://www.costco.com/ | 
     driver.get("https://www.costco.com/");
-    // 2 | setWindowSize | 1936x1048 | 
-    driver.manage().window().setSize(new Dimension(1936, 1048));
-    // 3 | click | css=#media-cdn-set-30_ins_1 .col-xs-6:nth-child(2) .img-responsive | 
+    // 2 | click | css=#media-cdn-set-30_ins_1 .col-xs-6:nth-child(2) .img-responsive | 
     driver.findElement(By.cssSelector("#media-cdn-set-30_ins_1 .col-xs-6:nth-child(2) .img-responsive")).click();
-    // 4 | click | css=.col-xs-6:nth-child(13) .img-responsive | 
+    // 3 | click | css=.col-xs-6:nth-child(13) .img-responsive | 
     driver.findElement(By.cssSelector(".col-xs-6:nth-child(13) .img-responsive")).click();
-    // 5 | mouseOver | css=.product-h1-container-v2 .pill-style-promotions > span | 
+    // 4 | mouseOver | css=.product-h1-container-v2 .pill-style-promotions > span | 
     {
       WebElement element = driver.findElement(By.cssSelector(".product-h1-container-v2 .pill-style-promotions > span"));
       Actions builder = new Actions(driver);
       builder.moveToElement(element).perform();
     }
-    // 6 | runScript | window.scrollTo(0,0) | 
+    // 5 | runScript | window.scrollTo(0,0) | 
     js.executeScript("window.scrollTo(0,0)");
-    // 7 | runScript | window.scrollTo(0,356) | 
+    // 6 | runScript | window.scrollTo(0,356) | 
     js.executeScript("window.scrollTo(0,356)");
+    // 7 | storeText | css=h1:nth-child(2) | productName
+    vars.put("productName", driver.findElement(By.cssSelector("h1:nth-child(2)")).getText());
     // 8 | click | id=add-to-cart-btn | 
     driver.findElement(By.id("add-to-cart-btn")).click();
     // 9 | click | css=a > .btn | 
     driver.findElement(By.cssSelector("a > .btn")).click();
+    // 10 | assertText | linkText=Sony 85" Class - X80CK Series - 4K UHD LED LCD TV | ${productName}
+    assertThat(driver.findElement(By.linkText("Sony 85\" Class - X80CK Series - 4K UHD LED LCD TV")).getText(), is("vars.get(\"productName\").toString()"));
   }
 }

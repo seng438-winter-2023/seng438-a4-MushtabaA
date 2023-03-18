@@ -14,13 +14,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1ee15c9a-c1d4-425a-a461-948dd66a1f65",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1936x1048",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "fa074eff-6999-4ada-aa6a-16c3251d36cf",
       "comment": "",
       "command": "click",
@@ -70,6 +63,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "881dd292-0c8c-4573-ab9d-d4364a60d434",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h1:nth-child(2)",
+      "targets": [],
+      "value": "productName"
+    }, {
       "id": "16a14512-c95b-4800-ba0c-d3d4ba7cfae1",
       "comment": "",
       "command": "click",
@@ -95,6 +95,21 @@
         ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "f86e8337-7e88-459d-90db-84580d8ef56c",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Sony 85\" Class - X80CK Series - 4K UHD LED LCD TV",
+      "targets": [
+        ["linkText=Sony 85\" Class - X80CK Series - 4K UHD LED LCD TV", "linkText"],
+        ["css=#product-name_1927260192 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sony 85\" Class - X80CK Series - 4K UHD LED LCD TV')]", "xpath:link"],
+        ["xpath=//h3[@id='product-name_1927260192']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.costco.com/.product.9785081.html')]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sony 85\" Class - X80CK Series - 4K UHD LED LCD TV')]", "xpath:innerText"]
+      ],
+      "value": "${productName}"
     }]
   }, {
     "id": "1851039e-ac5e-4632-9b45-06e935a2de5c",
@@ -115,109 +130,13 @@
       "value": ""
     }, {
       "id": "90ce2b43-b4a1-4d35-b57c-62ea15ae0092",
-      "comment": "",
+      "comment": "Since Costco randomly generates an ID every time, the ID must be taken after adding the product to the cart in order for this command to pass",
       "command": "click",
       "target": "id=remove-serial_1926344178",
       "targets": [
         ["id=remove-serial_1926344178", "id"],
         ["css=#remove-serial_1926344178", "css:finder"],
         ["xpath=//span[@id='remove-serial_1926344178']", "xpath:attributes"],
-        ["xpath=//div[@id='order-item_1']/div/div/div[2]/div/div[4]/button/span", "xpath:idRelative"],
-        ["xpath=//div/div[4]/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }]
-  }, {
-    "id": "a06b7996-bcca-48b3-abd9-20d7f90857d0",
-    "name": "testAddAndRemoveFromCart",
-    "commands": [{
-      "id": "3d46a801-b078-4953-ba82-19461134b463",
-      "comment": "",
-      "command": "open",
-      "target": "https://www.costco.com/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3ae5868e-0ff7-403c-9a5e-a4757a6aee0d",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1936x1048",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "adcbfe07-db5e-4fb1-9c85-c7cb43c05a99",
-      "comment": "",
-      "command": "click",
-      "target": "css=#media-cdn-set-30_ins_1 .col-xs-6:nth-child(2) .img-responsive",
-      "targets": [
-        ["css=#media-cdn-set-30_ins_1 .col-xs-6:nth-child(2) .img-responsive", "css:finder"],
-        ["xpath=//img[contains(@src,'https://mobilecontent.costco.com/live/resource/img/static-us-tiles/4-corners-tv.png')]", "xpath:img"],
-        ["xpath=//div[@id='media-cdn-set-30_ins_1']/div/div[2]/a/span/picture/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div[2]/a/span/picture/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "b4545297-8e67-441c-9f88-6430ac194a8e",
-      "comment": "",
-      "command": "click",
-      "target": "css=.col-xs-6:nth-child(13) .img-responsive",
-      "targets": [
-        ["css=.col-xs-6:nth-child(13) .img-responsive", "css:finder"],
-        ["xpath=//img[@alt='Sony 85\" Class - X80CK Series - 4K UHD LED LCD TV']", "xpath:img"],
-        ["xpath=//div[@id='search-results']/div[4]/div[9]/div/div[2]/div/a/img", "xpath:idRelative"],
-        ["xpath=//div[9]/div/div[2]/div/a/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "791cecde-44ee-4b2e-900b-aae05de0d6bf",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "aa763189-39d8-4e6e-9751-d2c816eb05f4",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,256)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2d9e7380-4392-45c3-b68c-72e915c64a51",
-      "comment": "",
-      "command": "click",
-      "target": "id=add-to-cart-btn",
-      "targets": [
-        ["id=add-to-cart-btn", "id"],
-        ["name=add-to-cart", "name"],
-        ["css=#add-to-cart-btn", "css:finder"],
-        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
-        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
-        ["xpath=//ul/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c66eea9c-2c39-4d24-8819-5ca81fb3e8ca",
-      "comment": "",
-      "command": "click",
-      "target": "css=a > .btn",
-      "targets": [
-        ["css=a > .btn", "css:finder"],
-        ["xpath=//div[@id='costcoModalText']/div[2]/div[2]/a/button", "xpath:idRelative"],
-        ["xpath=//a/button", "xpath:position"],
-        ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "f0d9fafe-f81f-4989-961c-93fee57fbd30",
-      "comment": "",
-      "command": "click",
-      "target": "id=remove-serial_1926344146",
-      "targets": [
-        ["id=remove-serial_1926344146", "id"],
-        ["css=#remove-serial_1926344146", "css:finder"],
-        ["xpath=//span[@id='remove-serial_1926344146']", "xpath:attributes"],
         ["xpath=//div[@id='order-item_1']/div/div/div[2]/div/div[4]/button/span", "xpath:idRelative"],
         ["xpath=//div/div[4]/button/span", "xpath:position"],
         ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
