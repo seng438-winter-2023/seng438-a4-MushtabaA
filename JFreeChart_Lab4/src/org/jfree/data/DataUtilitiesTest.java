@@ -936,6 +936,7 @@ public class DataUtilitiesTest {
 				actualCumulativePercentage.getValue(1));
 	}
 	
+	// Testing empty data parameter
 	@Test
 	public void testCloneEmptyData() {
 		
@@ -947,6 +948,7 @@ public class DataUtilitiesTest {
 		assertArrayEquals(expectedData, arrayResult);
 	}
 	
+	// Testing data will null values
 	@Test
     public void testCloneNullValues() {
         
@@ -956,6 +958,7 @@ public class DataUtilitiesTest {
 		assertTrue(DataUtilities.equal(inputData, arrayResult));
     }
 	
+	// Testing data with positive values
 	@Test
 	public void testClonePositiveValues() {
 		
@@ -967,6 +970,7 @@ public class DataUtilitiesTest {
 		assertArrayEquals(expectedData, arrayResult);
 	}
 	
+	// Testing data with negative values
 	@Test
 	public void testCloneNegativeValues() {
 		
@@ -978,6 +982,7 @@ public class DataUtilitiesTest {
 		assertArrayEquals(expectedData, arrayResult);
 	}
 	
+	// Testing data with positive decimal values
 	@Test
 	public void testClonePositiveDecimalValues() {
 		
@@ -989,6 +994,7 @@ public class DataUtilitiesTest {
 		assertArrayEquals(expectedData, arrayResult);
 	}
 	
+	// Testing data with negative decimal values
 	@Test
 	public void testCloneNegativeDecimalValues() {
 		
@@ -1000,6 +1006,7 @@ public class DataUtilitiesTest {
 		assertArrayEquals(expectedData, arrayResult);
 	}
 	
+	// Testing data with smallest normal value
 	@Test
 	public void testCloneLBValues() {
 		
@@ -1011,6 +1018,7 @@ public class DataUtilitiesTest {
 		assertArrayEquals(expectedData, arrayResult);
 	}
 	
+	// Testing data with maximum positive value
 	@Test
 	public void testCloneUBValues() {
 		
